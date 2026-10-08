@@ -178,8 +178,7 @@ export default function DashboardPage() {
           Good {getTimeOfDay()}, {user?.name.split(" ")[0]}
         </h2>
         <p className="text-muted-foreground text-sm mt-1">
-          Here&apos;s an overview of TetraTech&apos;s asset compliance
-          status.
+          Here&apos;s an overview of TetraTech&apos;s asset compliance status.
         </p>
       </div>
 
@@ -273,7 +272,7 @@ export default function DashboardPage() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <ResponsiveContainer width="100%" height={240}>
+            <ResponsiveContainer width="100%" height={300}>
               <BarChart
                 data={siteChartData}
                 margin={{ top: 4, right: 8, left: -20, bottom: 0 }}
@@ -293,7 +292,8 @@ export default function DashboardPage() {
                   type="category"
                   dataKey="site"
                   tick={{ fontSize: 10 }}
-                  width={90}
+                  width={110}
+                  interval={0}
                 />
                 <Tooltip />
                 <Legend
@@ -329,7 +329,7 @@ export default function DashboardPage() {
             </CardTitle>
           </CardHeader>
           <CardContent className="flex items-center justify-center">
-            <ResponsiveContainer width="100%" height={240}>
+            <ResponsiveContainer width="100%" height={260}>
               <PieChart>
                 <Pie
                   data={pieData}
@@ -339,12 +339,14 @@ export default function DashboardPage() {
                   outerRadius={80}
                   paddingAngle={3}
                   dataKey="value"
+                  label={({ value }) => value}
+                  labelLine={false}
                 >
                   <Cell fill={GREEN} />
                   <Cell fill={RED} />
                   <Cell fill={AMBER} />
                 </Pie>
-                <Tooltip />
+
                 <Legend iconSize={10} iconType="circle" />
               </PieChart>
             </ResponsiveContainer>
@@ -450,10 +452,13 @@ export default function DashboardPage() {
             <div className="flex items-center gap-2.5 py-3 px-3 rounded-lg bg-muted/30 border border-border/60">
               <ClipboardCheck className="w-4 h-4 text-muted-foreground/50 shrink-0" />
               <div>
-                <p className="text-xs font-medium text-muted-foreground">No active permits on site today</p>
+                <p className="text-xs font-medium text-muted-foreground">
+                  No active permits on site today
+                </p>
                 {pendingPermits.length > 0 && (
                   <p className="text-[10px] text-muted-foreground/70 mt-0.5">
-                    {pendingPermits.length} permit{pendingPermits.length !== 1 ? "s" : ""} awaiting approval
+                    {pendingPermits.length} permit
+                    {pendingPermits.length !== 1 ? "s" : ""} awaiting approval
                   </p>
                 )}
               </div>
@@ -466,7 +471,9 @@ export default function DashboardPage() {
                   <div className="flex items-center gap-3 px-3 py-2 rounded-lg border border-green-200/60 bg-green-50/40 hover:bg-green-50 transition-colors">
                     <span className="w-2 h-2 rounded-full bg-green-500 shrink-0 animate-pulse" />
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs font-medium truncate text-foreground">{permit.contractorCompany}</p>
+                      <p className="text-xs font-medium truncate text-foreground">
+                        {permit.contractorCompany}
+                      </p>
                       <p className="text-[10px] text-muted-foreground">
                         {site?.name} &middot; {permit.locationOnSite}
                       </p>
@@ -484,7 +491,8 @@ export default function DashboardPage() {
               <div className="flex items-center gap-3 px-3 py-2 rounded-lg border border-amber-200/60 bg-amber-50/40 hover:bg-amber-50 transition-colors mt-1">
                 <CircleDashed className="w-3.5 h-3.5 text-amber-500 shrink-0" />
                 <p className="text-xs text-amber-700 flex-1">
-                  {pendingPermits.length} permit{pendingPermits.length !== 1 ? "s" : ""} awaiting approval
+                  {pendingPermits.length} permit
+                  {pendingPermits.length !== 1 ? "s" : ""} awaiting approval
                 </p>
                 <ChevronRight className="w-3.5 h-3.5 text-amber-400" />
               </div>

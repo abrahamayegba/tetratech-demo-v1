@@ -2317,6 +2317,7 @@ export const DEMO_NOTIFICATIONS: Notification[] = [
 ];
 
 // ─── Demo Reactive Jobs ────────────────────────────────────────────────────────
+
 export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
   {
     id: "job_001",
@@ -2337,9 +2338,9 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     notes:
       "Window is on south-facing wall. May need scaffolding for external access.",
     attachments: [],
-    scheduledDate: "2026-05-06",
-    createdAt: "2026-03-28T14:30:00Z",
-    updatedAt: "2026-03-28T14:30:00Z",
+    scheduledDate: "2026-10-06",
+    createdAt: "2026-10-01T14:30:00Z",
+    updatedAt: "2026-10-01T14:30:00Z",
   },
   {
     id: "job_002",
@@ -2360,9 +2361,9 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     notes:
       "Electrician to inspect. May need to isolate the circuit until repaired.",
     attachments: [],
-    scheduledDate: "2026-04-30",
-    createdAt: "2026-03-27T09:15:00Z",
-    updatedAt: "2026-03-29T10:45:00Z",
+    scheduledDate: "2026-10-07",
+    createdAt: "2026-10-02T09:15:00Z",
+    updatedAt: "2026-10-03T10:45:00Z",
   },
   {
     id: "job_003",
@@ -2380,9 +2381,9 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     notes:
       "Standard replacement handle. Can be ordered from facilities supplier.",
     attachments: [],
-    scheduledDate: "2026-05-12",
-    createdAt: "2026-03-25T11:20:00Z",
-    updatedAt: "2026-03-25T11:20:00Z",
+    scheduledDate: "2026-10-12",
+    createdAt: "2026-10-03T11:20:00Z",
+    updatedAt: "2026-10-03T11:20:00Z",
   },
   {
     id: "job_004",
@@ -2403,9 +2404,9 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     notes:
       "Plumber called. Temporary catch bucket in place to prevent water damage.",
     attachments: [],
-    scheduledDate: "2026-05-02",
-    createdAt: "2026-03-26T16:00:00Z",
-    updatedAt: "2026-03-29T08:30:00Z",
+    scheduledDate: "2026-10-08",
+    createdAt: "2026-10-04T16:00:00Z",
+    updatedAt: "2026-10-07T08:30:00Z",
   },
   {
     id: "job_005",
@@ -2426,10 +2427,10 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     notes:
       "Engineer serviced boiler. Scale buildup removed. System now running smoothly.",
     attachments: [],
-    scheduledDate: "2026-03-22",
-    completedAt: "2026-03-28T15:00:00Z",
-    createdAt: "2026-03-22T10:00:00Z",
-    updatedAt: "2026-03-28T15:00:00Z",
+    scheduledDate: "2026-10-04",
+    completedAt: "2026-10-07T15:00:00Z",
+    createdAt: "2026-10-01T10:00:00Z",
+    updatedAt: "2026-10-07T15:00:00Z",
   },
   {
     id: "job_006",
@@ -2446,11 +2447,10 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     assignedCompanyId: "sc_004",
     notes: "Bulk order of replacement T8 tubes needed.",
     attachments: [],
-    scheduledDate: "2026-05-19",
-    createdAt: "2026-03-24T13:45:00Z",
-    updatedAt: "2026-03-24T13:45:00Z",
+    scheduledDate: "2026-10-19",
+    createdAt: "2026-10-02T13:45:00Z",
+    updatedAt: "2026-10-02T13:45:00Z",
   },
-  // Today (2026-04-29)
   {
     id: "job_007",
     siteId: "site_001",
@@ -2470,9 +2470,9 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     notes:
       "Section taped off. Replacement tile ordered — same spec as existing (600x600 mineral fibre).",
     attachments: [],
-    scheduledDate: "2026-04-29",
-    createdAt: "2026-04-29T08:15:00Z",
-    updatedAt: "2026-04-29T08:15:00Z",
+    scheduledDate: "2026-10-08",
+    createdAt: "2026-10-08T08:15:00Z",
+    updatedAt: "2026-10-08T08:15:00Z",
   },
   {
     id: "job_008",
@@ -2493,11 +2493,10 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     notes:
       "Plumber on site. Booster pump being inspected now. Possible impeller wear.",
     attachments: [],
-    scheduledDate: "2026-04-29",
-    createdAt: "2026-04-29T07:45:00Z",
-    updatedAt: "2026-04-29T09:00:00Z",
+    scheduledDate: "2026-10-08",
+    createdAt: "2026-10-08T07:45:00Z",
+    updatedAt: "2026-10-08T09:00:00Z",
   },
-  // Tomorrow (2026-04-30)
   {
     id: "job_009",
     siteId: "site_001",
@@ -2514,9 +2513,9 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     notes:
       "Heavy-duty lever handle required — check spec from last replacement in 2023.",
     attachments: [],
-    scheduledDate: "2026-04-30",
-    createdAt: "2026-04-29T10:00:00Z",
-    updatedAt: "2026-04-29T10:00:00Z",
+    scheduledDate: "2026-10-09",
+    createdAt: "2026-10-08T10:00:00Z",
+    updatedAt: "2026-10-08T10:00:00Z",
   },
   {
     id: "job_010",
@@ -2537,13 +2536,14 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     notes:
       "Fault light is amber — likely sensor contamination. Engineer to attend and clear or replace.",
     attachments: [],
-    scheduledDate: "2026-04-30",
-    createdAt: "2026-04-29T11:30:00Z",
-    updatedAt: "2026-04-29T11:30:00Z",
+    scheduledDate: "2026-10-09",
+    createdAt: "2026-10-08T11:30:00Z",
+    updatedAt: "2026-10-08T11:30:00Z",
   },
 ];
 
 // ─── Demo Planned Jobs ─────────────────────────────────────────────────────────
+
 export const DEMO_PLANNED_JOBS: PlannedJob[] = [
   {
     id: "pj_001",
@@ -2554,7 +2554,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "high",
     status: "scheduled",
     frequency: "annual",
-    scheduledDate: "2026-05-08",
+    scheduledDate: "2026-10-08",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
     assignedTo: "Caledonian Fire & Safety Ltd",
@@ -2562,8 +2562,8 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "All 12 extinguishers to be checked. Tags to be updated post-service.",
     attachments: [],
-    createdAt: "2026-04-01T09:00:00Z",
-    updatedAt: "2026-04-01T09:00:00Z",
+    createdAt: "2026-10-01T09:00:00Z",
+    updatedAt: "2026-10-01T09:00:00Z",
   },
   {
     id: "pj_002",
@@ -2574,7 +2574,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "high",
     status: "scheduled",
     frequency: "biannual",
-    scheduledDate: "2026-05-15",
+    scheduledDate: "2026-10-15",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
     assignedTo: "Highlands Lifting & LOLER Ltd",
@@ -2582,8 +2582,8 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "Engineer must sign LOLER certificate on site. Copy to be retained on file.",
     attachments: [],
-    createdAt: "2026-04-01T09:00:00Z",
-    updatedAt: "2026-04-01T09:00:00Z",
+    createdAt: "2026-10-01T09:00:00Z",
+    updatedAt: "2026-10-01T09:00:00Z",
   },
   {
     id: "pj_003",
@@ -2594,7 +2594,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "high",
     status: "scheduled",
     frequency: "biannual",
-    scheduledDate: "2026-05-22",
+    scheduledDate: "2026-10-22",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
     assignedTo: "Secure Systems Scotland Ltd",
@@ -2602,8 +2602,8 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "Night staff to be informed of planned alarm test. Avoid 08:00–09:00 window.",
     attachments: [],
-    createdAt: "2026-04-02T10:00:00Z",
-    updatedAt: "2026-04-02T10:00:00Z",
+    createdAt: "2026-10-02T10:00:00Z",
+    updatedAt: "2026-10-02T10:00:00Z",
   },
   {
     id: "pj_004",
@@ -2614,7 +2614,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "medium",
     status: "scheduled",
     frequency: "monthly",
-    scheduledDate: "2026-05-05",
+    scheduledDate: "2026-10-05",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
     assignedTo: "AquaSafe Compliance Ltd",
@@ -2622,8 +2622,8 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "Results to be logged in Legionella log book. Report any readings outside 50–60°C range.",
     attachments: [],
-    createdAt: "2026-04-03T09:00:00Z",
-    updatedAt: "2026-04-03T09:00:00Z",
+    createdAt: "2026-10-03T09:00:00Z",
+    updatedAt: "2026-10-03T09:00:00Z",
   },
   {
     id: "pj_005",
@@ -2634,7 +2634,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "medium",
     status: "scheduled",
     frequency: "annual",
-    scheduledDate: "2026-06-10",
+    scheduledDate: "2026-10-20",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
     assignedTo: "Spark Electrical Testing Ltd",
@@ -2642,8 +2642,8 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "Estimated 60+ items. Arrange out-of-hours access with site manager.",
     attachments: [],
-    createdAt: "2026-04-05T09:00:00Z",
-    updatedAt: "2026-04-05T09:00:00Z",
+    createdAt: "2026-10-05T09:00:00Z",
+    updatedAt: "2026-10-05T09:00:00Z",
   },
   {
     id: "pj_011",
@@ -2654,7 +2654,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "medium",
     status: "in-progress",
     frequency: "monthly",
-    scheduledDate: "2026-04-29",
+    scheduledDate: "2026-10-08",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
     assignedTo: "AquaSafe Compliance Ltd",
@@ -2662,8 +2662,8 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "Engineer on site from 09:00. Log all readings in Legionella logbook.",
     attachments: [],
-    createdAt: "2026-04-01T09:00:00Z",
-    updatedAt: "2026-04-29T09:15:00Z",
+    createdAt: "2026-10-01T09:00:00Z",
+    updatedAt: "2026-10-08T09:15:00Z",
   },
   {
     id: "pj_012",
@@ -2674,7 +2674,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "medium",
     status: "in-progress",
     frequency: "annual",
-    scheduledDate: "2026-04-29",
+    scheduledDate: "2026-10-08",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
     assignedTo: "Spark Electrical Testing Ltd",
@@ -2682,8 +2682,8 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "Estimated 65 items. Two engineers on site. Staff rooms accessed from 08:30.",
     attachments: [],
-    createdAt: "2026-04-05T09:00:00Z",
-    updatedAt: "2026-04-29T08:30:00Z",
+    createdAt: "2026-10-05T09:00:00Z",
+    updatedAt: "2026-10-08T08:30:00Z",
   },
   {
     id: "pj_013",
@@ -2694,15 +2694,15 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "medium",
     status: "scheduled",
     frequency: "monthly",
-    scheduledDate: "2026-04-30",
+    scheduledDate: "2026-10-09",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
     assignedTo: "AquaSafe Compliance Ltd",
     assignedCompanyId: "sc_005",
     notes: "Access to plant room and all floor bathrooms required.",
     attachments: [],
-    createdAt: "2026-04-01T09:00:00Z",
-    updatedAt: "2026-04-01T09:00:00Z",
+    createdAt: "2026-10-01T09:00:00Z",
+    updatedAt: "2026-10-01T09:00:00Z",
   },
   {
     id: "pj_014",
@@ -2713,7 +2713,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "high",
     status: "scheduled",
     frequency: "biannual",
-    scheduledDate: "2026-04-30",
+    scheduledDate: "2026-10-09",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
     assignedTo: "Highlands Lifting & LOLER Ltd",
@@ -2721,8 +2721,8 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "LOLER certificates to be signed on site. Ward to be notified prior.",
     attachments: [],
-    createdAt: "2026-04-02T09:00:00Z",
-    updatedAt: "2026-04-02T09:00:00Z",
+    createdAt: "2026-10-02T09:00:00Z",
+    updatedAt: "2026-10-02T09:00:00Z",
   },
   {
     id: "pj_006",
@@ -2733,7 +2733,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "medium",
     status: "in-progress",
     frequency: "monthly",
-    scheduledDate: "2026-04-30",
+    scheduledDate: "2026-10-09",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
     assignedTo: "Caledonian Fire & Safety Ltd",
@@ -2741,8 +2741,8 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "Record lamp pass/fail status for each fitting. Replace any failed units immediately.",
     attachments: [],
-    createdAt: "2026-04-01T09:00:00Z",
-    updatedAt: "2026-04-28T09:00:00Z",
+    createdAt: "2026-10-01T09:00:00Z",
+    updatedAt: "2026-10-07T09:00:00Z",
   },
   {
     id: "pj_007",
@@ -2753,7 +2753,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "low",
     status: "scheduled",
     frequency: "biannual",
-    scheduledDate: "2026-06-18",
+    scheduledDate: "2026-10-18",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
     assignedTo: "National Gate Services Ltd",
@@ -2761,8 +2761,8 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "Force test and safety edge checks required. Gate to be offline for approx 2 hours.",
     attachments: [],
-    createdAt: "2026-04-06T09:00:00Z",
-    updatedAt: "2026-04-06T09:00:00Z",
+    createdAt: "2026-10-06T09:00:00Z",
+    updatedAt: "2026-10-06T09:00:00Z",
   },
   {
     id: "pj_008",
@@ -2773,7 +2773,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "high",
     status: "scheduled",
     frequency: "annual",
-    scheduledDate: "2026-07-03",
+    scheduledDate: "2026-10-24",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
     assignedTo: "Spark Electrical Testing Ltd",
@@ -2781,8 +2781,8 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "Partial isolation required. Coordinate with ward sister to minimise patient disruption.",
     attachments: [],
-    createdAt: "2026-04-07T09:00:00Z",
-    updatedAt: "2026-04-07T09:00:00Z",
+    createdAt: "2026-10-07T09:00:00Z",
+    updatedAt: "2026-10-07T09:00:00Z",
   },
   {
     id: "pj_009",
@@ -2793,15 +2793,15 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "medium",
     status: "scheduled",
     frequency: "monthly",
-    scheduledDate: "2026-05-07",
+    scheduledDate: "2026-10-07",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
     assignedTo: "AquaSafe Compliance Ltd",
     assignedCompanyId: "sc_005",
     notes: "Access required to utility room and both floor bathrooms.",
     attachments: [],
-    createdAt: "2026-04-03T09:00:00Z",
-    updatedAt: "2026-04-03T09:00:00Z",
+    createdAt: "2026-10-03T09:00:00Z",
+    updatedAt: "2026-10-03T09:00:00Z",
   },
   {
     id: "pj_010",
@@ -2812,7 +2812,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "high",
     status: "completed",
     frequency: "annual",
-    scheduledDate: "2026-04-15",
+    scheduledDate: "2026-10-03",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
     assignedTo: "Caledonian Fire & Safety Ltd",
@@ -2820,11 +2820,10 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "All 18 fire doors inspected. 2 door closers replaced. Report filed.",
     attachments: [],
-    completedAt: "2026-04-15T14:30:00Z",
-    createdAt: "2026-03-15T09:00:00Z",
-    updatedAt: "2026-04-15T14:30:00Z",
+    completedAt: "2026-10-03T14:30:00Z",
+    createdAt: "2026-10-01T09:00:00Z",
+    updatedAt: "2026-10-03T14:30:00Z",
   },
-  // ── Extra jobs spread across the next few days ──────────────────────────────
   {
     id: "pj_015",
     siteId: "site_001",
@@ -2834,15 +2833,15 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "medium",
     status: "scheduled",
     frequency: "monthly",
-    scheduledDate: "2026-04-30",
+    scheduledDate: "2026-10-09",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
     assignedTo: "Caledonian Fire & Safety Ltd",
     assignedCompanyId: "sc_002",
     notes: "Ward staff to be notified before any alarm activation.",
     attachments: [],
-    createdAt: "2026-04-01T09:00:00Z",
-    updatedAt: "2026-04-01T09:00:00Z",
+    createdAt: "2026-10-01T09:00:00Z",
+    updatedAt: "2026-10-01T09:00:00Z",
   },
   {
     id: "pj_016",
@@ -2853,7 +2852,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "high",
     status: "scheduled",
     frequency: "annual",
-    scheduledDate: "2026-04-30",
+    scheduledDate: "2026-10-10",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
     assignedTo: "AquaSafe Compliance Ltd",
@@ -2861,8 +2860,8 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "All 8 TMVs to be stripped, descaled and reset. Isolation required per en-suite.",
     attachments: [],
-    createdAt: "2026-04-03T09:00:00Z",
-    updatedAt: "2026-04-03T09:00:00Z",
+    createdAt: "2026-10-03T09:00:00Z",
+    updatedAt: "2026-10-03T09:00:00Z",
   },
   {
     id: "pj_017",
@@ -2873,15 +2872,15 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "medium",
     status: "scheduled",
     frequency: "monthly",
-    scheduledDate: "2026-05-01",
+    scheduledDate: "2026-10-10",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
     assignedTo: "Malcolm Ross",
     notes:
       "Call point Zone 3 (Ward B corridor) to be tested this week. Test at 10:00.",
     attachments: [],
-    createdAt: "2026-04-15T09:00:00Z",
-    updatedAt: "2026-04-15T09:00:00Z",
+    createdAt: "2026-10-05T09:00:00Z",
+    updatedAt: "2026-10-05T09:00:00Z",
   },
   {
     id: "pj_018",
@@ -2892,15 +2891,15 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "medium",
     status: "scheduled",
     frequency: "quarterly",
-    scheduledDate: "2026-05-01",
+    scheduledDate: "2026-10-11",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
     assignedTo: "Spark Electrical Testing Ltd",
     assignedCompanyId: "sc_004",
     notes: "All 6 emergency stop buttons to be tested. Log results on site.",
     attachments: [],
-    createdAt: "2026-04-05T09:00:00Z",
-    updatedAt: "2026-04-05T09:00:00Z",
+    createdAt: "2026-10-05T09:00:00Z",
+    updatedAt: "2026-10-05T09:00:00Z",
   },
   {
     id: "pj_019",
@@ -2911,7 +2910,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "high",
     status: "scheduled",
     frequency: "biannual",
-    scheduledDate: "2026-05-02",
+    scheduledDate: "2026-10-12",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
     assignedTo: "Highlands Lifting & LOLER Ltd",
@@ -2919,8 +2918,8 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "12 slings in total across all rooms. All must have LOLER examination certificate.",
     attachments: [],
-    createdAt: "2026-04-01T09:00:00Z",
-    updatedAt: "2026-04-01T09:00:00Z",
+    createdAt: "2026-10-01T09:00:00Z",
+    updatedAt: "2026-10-01T09:00:00Z",
   },
   {
     id: "pj_020",
@@ -2931,7 +2930,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "high",
     status: "scheduled",
     frequency: "annual",
-    scheduledDate: "2026-05-02",
+    scheduledDate: "2026-10-13",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
     assignedTo: "Caledonian Fire & Safety Ltd",
@@ -2939,8 +2938,8 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "Scottish Fire and Rescue to be notified 48hrs in advance. Water supply access required.",
     attachments: [],
-    createdAt: "2026-04-08T09:00:00Z",
-    updatedAt: "2026-04-08T09:00:00Z",
+    createdAt: "2026-10-08T09:00:00Z",
+    updatedAt: "2026-10-08T09:00:00Z",
   },
   {
     id: "pj_021",
@@ -2951,7 +2950,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "medium",
     status: "scheduled",
     frequency: "monthly",
-    scheduledDate: "2026-05-05",
+    scheduledDate: "2026-10-15",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
     assignedTo: "AquaSafe Compliance Ltd",
@@ -2959,8 +2958,8 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "Access required plant room 08:30. Legionella log book to be updated on site.",
     attachments: [],
-    createdAt: "2026-04-03T09:00:00Z",
-    updatedAt: "2026-04-03T09:00:00Z",
+    createdAt: "2026-10-03T09:00:00Z",
+    updatedAt: "2026-10-03T09:00:00Z",
   },
   {
     id: "pj_022",
@@ -2971,15 +2970,15 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "low",
     status: "scheduled",
     frequency: "annual",
-    scheduledDate: "2026-05-06",
+    scheduledDate: "2026-10-16",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
     assignedTo: "National Gate Services Ltd",
     assignedCompanyId: "sc_007",
     notes: "Engineer to check springs, limit switches, and manual override.",
     attachments: [],
-    createdAt: "2026-04-07T09:00:00Z",
-    updatedAt: "2026-04-07T09:00:00Z",
+    createdAt: "2026-10-07T09:00:00Z",
+    updatedAt: "2026-10-07T09:00:00Z",
   },
   {
     id: "pj_023",
@@ -2990,7 +2989,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     priority: "medium",
     status: "scheduled",
     frequency: "monthly",
-    scheduledDate: "2026-05-06",
+    scheduledDate: "2026-10-17",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
     assignedTo: "Caledonian Fire & Safety Ltd",
@@ -2998,8 +2997,8 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     notes:
       "Record pass/fail for each fitting. Any failed units to be reported immediately.",
     attachments: [],
-    createdAt: "2026-04-01T09:00:00Z",
-    updatedAt: "2026-04-01T09:00:00Z",
+    createdAt: "2026-10-01T09:00:00Z",
+    updatedAt: "2026-10-01T09:00:00Z",
   },
 ];
 
