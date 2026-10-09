@@ -1244,6 +1244,27 @@ export const DEMO_ASSET_INSTANCES: AssetInstance[] = [
     lastTestResult: "pass",
     createdAt: "2022-06-01T09:00:00Z",
   },
+  // Additional coverage across every remaining active site. These records are
+  // intentionally generated from the same fixture so the dashboard and Live
+  // Assets always share one source of truth.
+  ...DEMO_SITES.filter((site) => site.id !== "site_001" && site.id !== "site_002").flatMap((site, siteIndex) =>
+    [0, 1].map((slot) => {
+      const assetIndex = siteIndex * 2 + slot;
+      const result = assetIndex < 3 ? undefined : assetIndex < 13 ? "pending" : assetIndex % 9 === 0 ? "fail" : "pass";
+      return {
+        id: `ai_extra_${String(assetIndex + 1).padStart(2, "0")}`,
+        assetTypeId: DEMO_ASSET_TYPES[(assetIndex + siteIndex) % DEMO_ASSET_TYPES.length].id,
+        siteId: site.id,
+        serialNumber: `FE-${site.simproId}-${slot + 1}`,
+        location: slot === 0 ? "Main Entrance" : "Plant Room",
+        installDate: "2024-01-15",
+        nextTestDue: "2026-11-15",
+        ...(result ? { lastTestResult: result } : {}),
+        ...(result === "pending" ? {} : { lastTestDate: "2026-09-15" }),
+        createdAt: "2024-01-15T09:00:00Z",
+      } satisfies AssetInstance;
+    }),
+  ),
 ];
 
 // ─── Demo Asset Tests ─────────────────────────────────────────────────────────
@@ -2193,7 +2214,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   },
 ];
 
-// ─── Demo Notifications ───────────────────────────────────────────────────────
+// ─── Demo Notifications ─────────────────────────────────────────��─────────────
 export const DEMO_NOTIFICATIONS: Notification[] = [
   {
     id: "ntf_001",
