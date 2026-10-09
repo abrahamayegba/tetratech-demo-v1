@@ -40,8 +40,6 @@ import Link from "next/link";
 import {
   formatDistanceToNow,
   isPast,
-  isWithinInterval,
-  addDays,
 } from "date-fns";
 import { useAuth } from "@/contexts/auth-context";
 import {
@@ -60,7 +58,15 @@ import {
 
 const GREEN = "#16a34a";
 const RED = "#dc2626";
+const BLUE = "#2563eb";
 const AMBER = "#d97706";
+
+function getOctoberStatus(index: number) {
+  if (index < 3) return "noTest" as const;
+  if (index < 10) return "scheduled" as const;
+  if (index % 7 === 0) return "fail" as const;
+  return "pass" as const;
+}
 
 export default function DashboardPage() {
   const { user } = useAuth();
@@ -82,32 +88,18 @@ export default function DashboardPage() {
 
   const activeSites = sites.filter((s) => s.status === "active").length;
   const totalAssets = instances.length;
-  const passedTests = tests.filter((t) => t.result === "pass").length;
-  const failedTests = tests.filter((t) => t.result === "fail").length;
+  const octoberStatuses = instances.map((instance, index) => ({
+    instance,
+    status: getOctoberStatus(index),
+  }));
+  const passedTests = octoberStatuses.filter((item) => item.status === "pass").length;
+  const failedTests = octoberStatuses.filter((item) => item.status === "fail").length;
+  const scheduledTests = octoberStatuses.filter((item) => item.status === "scheduled").length;
+  const noTestAssets = octoberStatuses.filter((item) => item.status === "noTest").length;
 
-  // Assets with no test at all or overdue for testing
-  const noTestAssets = instances.filter(
-    (i) =>
-      !i.lastTestResult ||
-      i.lastTestResult === "pending" ||
-      (i.nextTestDue && isPast(new Date(i.nextTestDue))),
-  ).length;
+  const overdueAssets = octoberStatuses.filter((item) => item.status === "noTest").length;
 
-  const overdueAssets = instances.filter(
-    (i) =>
-      i.nextTestDue &&
-      isPast(new Date(i.nextTestDue)) &&
-      i.lastTestResult !== "pending",
-  ).length;
-
-  const dueSoon = instances.filter((i) => {
-    if (!i.nextTestDue) return false;
-    const due = new Date(i.nextTestDue);
-    return isWithinInterval(due, {
-      start: new Date(),
-      end: addDays(new Date(), 30),
-    });
-  }).length;
+  const dueSoon = octoberStatuses.filter((item) => item.status === "scheduled").length;
 
   const unreadNotifications = notifications.filter((n) => !n.read).length;
   const openJobs = reactiveJobs.filter((j) => j.status === "open").length;
@@ -125,36 +117,35 @@ export default function DashboardPage() {
     return p.plannedStartDate <= todayStr && p.plannedEndDate >= todayStr;
   });
 
-  // Combo bar chart: pass / fail / no-test per site (active sites only)
+  // October status counts are spread across every active site for the demo.
   const siteChartData = sites
-    .filter((s) => s.status === "active")
-    .map((site) => {
-      const siteInstances = instances.filter((i) => i.siteId === site.id);
-      const pass = siteInstances.filter(
-        (i) => i.lastTestResult === "pass",
-      ).length;
-      const fail = siteInstances.filter(
-        (i) => i.lastTestResult === "fail",
-      ).length;
-      const noTest = siteInstances.filter(
-        (i) =>
-          !i.lastTestResult ||
-          i.lastTestResult === "pending" ||
-          (i.nextTestDue && isPast(new Date(i.nextTestDue))),
-      ).length;
+    .filter((site) => site.status === "active")
+    .map((site, siteIndex) => {
+      const siteInstances = instances.filter((instance) => instance.siteId === site.id);
+      const statusCounts = Array.from({ length: Math.max(siteInstances.length, 4) }).reduce(
+        (counts, _item, instanceIndex) => {
+          const status =
+            siteIndex < 3 && instanceIndex === 0
+              ? "noTest"
+              : getOctoberStatus(siteIndex * 4 + instanceIndex + 3);
+          counts[status] += 1;
+          return counts;
+        },
+        { pass: 0, fail: 0, scheduled: 0, noTest: 0 },
+      );
       const shortName = site.name
         .replace(
           / (Supported Living|Care Home|Day Centre|Resource Centre|Residential|Hub|Crown House)$/i,
           "",
         )
         .slice(0, 14);
-      return { site: shortName, pass, fail, noTest };
+      return { site: shortName, ...statusCounts };
     });
 
-  // Pie data — pass vs fail vs no test
   const pieData = [
     { name: "Pass", value: passedTests },
     { name: "Fail", value: failedTests },
+    { name: "Scheduled", value: scheduledTests },
     { name: "No Test", value: noTestAssets },
   ];
 
@@ -268,7 +259,7 @@ export default function DashboardPage() {
         <Card className="lg:col-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-semibold">
-              Asset Test Status by Site
+              October Asset Test Status by Site
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -309,6 +300,7 @@ export default function DashboardPage() {
                   radius={[0, 0, 0, 0]}
                 />
                 <Bar dataKey="fail" stackId="a" fill={RED} name="Fail" />
+                <Bar dataKey="scheduled" stackId="a" fill={BLUE} name="Scheduled" />
                 <Bar
                   dataKey="noTest"
                   stackId="a"
@@ -325,7 +317,7 @@ export default function DashboardPage() {
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-semibold">
-              Overall Pass / Fail / No Test
+              October Test Status
             </CardTitle>
           </CardHeader>
           <CardContent className="flex items-center justify-center">
@@ -344,6 +336,7 @@ export default function DashboardPage() {
                 >
                   <Cell fill={GREEN} />
                   <Cell fill={RED} />
+                  <Cell fill={BLUE} />
                   <Cell fill={AMBER} />
                 </Pie>
 
