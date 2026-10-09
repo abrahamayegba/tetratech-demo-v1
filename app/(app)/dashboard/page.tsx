@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   getSites,
   getAssetInstances,
@@ -70,6 +71,7 @@ function getOctoberStatus(index: number) {
 
 export default function DashboardPage() {
   const { user } = useAuth();
+  const router = useRouter();
   const [sites, setSites] = useState<Site[]>([]);
   const [instances, setInstances] = useState<AssetInstance[]>([]);
   const [tests, setTests] = useState<AssetTest[]>([]);
@@ -139,7 +141,7 @@ export default function DashboardPage() {
           "",
         )
         .slice(0, 14);
-      return { site: shortName, ...statusCounts };
+      return { site: shortName, siteId: site.id, ...statusCounts };
     });
 
   const pieData = [
@@ -268,6 +270,10 @@ export default function DashboardPage() {
                 data={siteChartData}
                 margin={{ top: 4, right: 8, left: -20, bottom: 0 }}
                 layout="vertical"
+                onClick={(event) => {
+                  const siteId = event?.activePayload?.[0]?.payload?.siteId;
+                  if (siteId) router.push(`/assets?site=${siteId}`);
+                }}
               >
                 <CartesianGrid
                   strokeDasharray="3 3"

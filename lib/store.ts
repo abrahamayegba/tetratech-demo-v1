@@ -46,7 +46,7 @@ const KEYS = {
   SEEDED: "es_seeded",
 };
 
-const SEED_VERSION = "v9"; // bump this to reseed all demo data
+const SEED_VERSION = "v10"; // bump this to reseed all demo data
 
 // ─── Seed ─────────────────────────────────────────────────────────────────────
 export function seedIfNeeded(): void {
@@ -57,7 +57,16 @@ export function seedIfNeeded(): void {
   localStorage.setItem(KEYS.USERS, JSON.stringify(DEMO_USERS));
   localStorage.setItem(KEYS.SITES, JSON.stringify(DEMO_SITES));
   localStorage.setItem(KEYS.ASSET_TYPES, JSON.stringify(DEMO_ASSET_TYPES));
-  localStorage.setItem(KEYS.ASSET_INSTANCES, JSON.stringify(DEMO_ASSET_INSTANCES));
+  localStorage.setItem(
+    KEYS.ASSET_INSTANCES,
+    JSON.stringify(
+      DEMO_ASSET_INSTANCES.map((asset, index) => ({
+        ...asset,
+        // Keep the demo's live inventory actionable without showing stale overdue dates.
+        nextTestDue: `2026-11-${String(Math.min(index + 1, 28)).padStart(2, "0")}`,
+      })),
+    ),
+  );
   localStorage.setItem(KEYS.ASSET_TESTS, JSON.stringify(DEMO_ASSET_TESTS));
   localStorage.setItem(KEYS.NOTIFICATIONS, JSON.stringify(DEMO_NOTIFICATIONS));
   localStorage.setItem(KEYS.REACTIVE_JOBS, JSON.stringify(DEMO_REACTIVE_JOBS));

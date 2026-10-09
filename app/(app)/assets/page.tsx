@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   getAssetInstances,
   saveAssetInstance,
@@ -75,6 +76,7 @@ const RESULT_CONFIG = {
 
 export default function AssetsPage() {
   const { user } = useAuth();
+  const searchParams = useSearchParams();
   const isAdmin = user?.role === "admin";
   const [instances, setInstances] = useState<AssetInstance[]>([]);
   const [types, setTypes] = useState<AssetType[]>([]);
@@ -93,7 +95,9 @@ export default function AssetsPage() {
     setInstances(getAssetInstances());
     setTypes(getAssetTypes());
     setSites(getSites());
-  }, []);
+    const linkedSite = searchParams.get("site");
+    if (linkedSite) setSiteFilter(linkedSite);
+  }, [searchParams]);
 
   function refresh() {
     setInstances(getAssetInstances());
