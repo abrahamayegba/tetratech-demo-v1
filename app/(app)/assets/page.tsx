@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   getAssetInstances,
   saveAssetInstance,
@@ -67,6 +68,11 @@ const RESULT_CONFIG = {
     class: "border-red-200 text-red-700 bg-red-50",
   },
   pending: {
+    label: "Scheduled",
+    icon: Clock,
+    class: "border-blue-200 text-blue-700 bg-blue-50",
+  },
+  noTest: {
     label: "No Test",
     icon: Clock,
     class: "border-amber-200 text-amber-700 bg-amber-50",
@@ -75,6 +81,7 @@ const RESULT_CONFIG = {
 
 export default function AssetsPage() {
   const { user } = useAuth();
+  const searchParams = useSearchParams();
   const isAdmin = user?.role === "admin";
   const [instances, setInstances] = useState<AssetInstance[]>([]);
   const [types, setTypes] = useState<AssetType[]>([]);
@@ -93,7 +100,9 @@ export default function AssetsPage() {
     setInstances(getAssetInstances());
     setTypes(getAssetTypes());
     setSites(getSites());
-  }, []);
+    const linkedSite = searchParams.get("site");
+    if (linkedSite) setSiteFilter(linkedSite);
+  }, [searchParams]);
 
   function refresh() {
     setInstances(getAssetInstances());
@@ -113,13 +122,11 @@ export default function AssetsPage() {
       site?.name.toLowerCase().includes(q);
     const matchSite = siteFilter === "all" || i.siteId === siteFilter;
     const matchType = typeFilter === "all" || i.assetTypeId === typeFilter;
-    // For result filter: if overdue, treat as "pending"; otherwise use actual result
-    const isOverdue = i.nextTestDue && isPast(new Date(i.nextTestDue));
-    const effectiveResult = isOverdue ? "pending" : i.lastTestResult;
-    const matchResult =
-      resultFilter === "all" ||
-      effectiveResult === resultFilter ||
-      (!effectiveResult && resultFilter === "pending");
+    const effectiveResult =
+      i.lastTestResult === "pending"
+        ? "pending"
+        : i.lastTestResult ?? "noTest";
+    const matchResult = resultFilter === "all" || effectiveResult === resultFilter;
     return matchSearch && matchSite && matchType && matchResult;
   });
 
@@ -193,7 +200,8 @@ export default function AssetsPage() {
             <SelectItem value="all">All Results</SelectItem>
             <SelectItem value="pass">Pass</SelectItem>
             <SelectItem value="fail">Fail</SelectItem>
-            <SelectItem value="pending">No Test</SelectItem>
+            <SelectItem value="pending">Scheduled</SelectItem>
+            <SelectItem value="noTest">No Test</SelectItem>
           </SelectContent>
         </Select>
       </div>
@@ -246,10 +254,10 @@ export default function AssetsPage() {
                         const isOverdue =
                           instance.nextTestDue &&
                           isPast(new Date(instance.nextTestDue));
-                        // If overdue, treat as "pending" (no test), otherwise use actual result
-                        const result = isOverdue
-                          ? "pending"
-                          : (instance.lastTestResult ?? "pending");
+                        const result =
+                          instance.lastTestResult === "pending"
+                            ? "pending"
+                            : instance.lastTestResult ?? "noTest";
                         const rc =
                           RESULT_CONFIG[result as keyof typeof RESULT_CONFIG] ??
                           RESULT_CONFIG.pending;
@@ -301,7 +309,7 @@ export default function AssetsPage() {
                             <td className="px-4 py-2.5">
                               <div className="flex items-center gap-1.5">
                                 <ResultIcon
-                                  className={`w-3.5 h-3.5 ${result === "pass" ? "text-green-600" : result === "fail" ? "text-red-600" : "text-amber-600"}`}
+                                  className={`w-3.5 h-3.5 ${result === "pass" ? "text-green-600" : result === "fail" ? "text-red-600" : result === "pending" ? "text-blue-600" : "text-amber-600"}`}
                                 />
                                 <Badge
                                   variant="outline"

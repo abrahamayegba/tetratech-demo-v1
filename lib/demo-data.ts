@@ -1157,7 +1157,7 @@ export const DEMO_ASSET_INSTANCES: AssetInstance[] = [
     installDate: "2022-09-01",
     nextTestDue: "2026-09-01",
     lastTestDate: "2025-09-01",
-    lastTestResult: "fail",
+    lastTestResult: "pass",
     createdAt: "2022-09-01T09:00:00Z",
   },
   {
@@ -1241,9 +1241,30 @@ export const DEMO_ASSET_INSTANCES: AssetInstance[] = [
     installDate: "2022-06-01",
     nextTestDue: "2026-06-01",
     lastTestDate: "2024-06-01",
-    lastTestResult: "fail",
+    lastTestResult: "pass",
     createdAt: "2022-06-01T09:00:00Z",
   },
+  // Additional coverage across every remaining active site. These records are
+  // intentionally generated from the same fixture so the dashboard and Live
+  // Assets always share one source of truth.
+  ...DEMO_SITES.filter((site) => site.id !== "site_001" && site.id !== "site_002").flatMap((site, siteIndex) =>
+    [0, 1].map((slot) => {
+      const assetIndex = siteIndex * 2 + slot;
+      const result = assetIndex < 3 ? undefined : assetIndex < 13 ? "pending" : assetIndex % 9 === 0 ? "fail" : "pass";
+      return {
+        id: `ai_extra_${String(assetIndex + 1).padStart(2, "0")}`,
+        assetTypeId: DEMO_ASSET_TYPES[(assetIndex + siteIndex) % DEMO_ASSET_TYPES.length].id,
+        siteId: site.id,
+        serialNumber: `FE-${site.simproId}-${slot + 1}`,
+        location: slot === 0 ? "Main Entrance" : "Plant Room",
+        installDate: "2024-01-15",
+        nextTestDue: "2026-11-15",
+        ...(result ? { lastTestResult: result } : {}),
+        ...(result === "pending" ? {} : { lastTestDate: "2026-09-15" }),
+        createdAt: "2024-01-15T09:00:00Z",
+      } satisfies AssetInstance;
+    }),
+  ),
 ];
 
 // ─── Demo Asset Tests ─────────────────────────────────────────────────────────
@@ -1579,7 +1600,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
     testedBy: "Caledonian Fire & Safety Ltd",
     testedByUserId: "usr_002",
     testDate: "2025-09-01",
-    result: "fail",
+    result: "pass",
     notes:
       "Extinguisher shows signs of corrosion on body. Pressure below minimum. Recommended replacement.",
     failureReasons: ["Body corrosion", "Pressure below minimum charge level"],
@@ -1606,7 +1627,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
     testedBy: "Highlands Lifting & LOLER Ltd",
     testedByUserId: "usr_001",
     testDate: "2025-06-01",
-    result: "fail",
+    result: "pass",
     notes:
       "Mast column crack identified. Wheel brakes intermittent. Removed from service.",
     failureReasons: [
@@ -2103,10 +2124,10 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_036",
     assetInstanceId: "ai_018",
-    testedBy: "",
-    testedByUserId: "",
+    testedBy: "Demo Testing Team",
+    testedByUserId: "usr_001",
     testDate: "2026-03-31",
-    result: "pending",
+    result: "pass",
     notes: "",
     attachments: [],
     nextTestDate: "2026-08-01",
@@ -2116,10 +2137,10 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_037",
     assetInstanceId: "ai_022",
-    testedBy: "",
-    testedByUserId: "",
+    testedBy: "Demo Testing Team",
+    testedByUserId: "usr_001",
     testDate: "2026-03-31",
-    result: "pending",
+    result: "pass",
     notes: "",
     attachments: [],
     nextTestDate: "2026-04-15",
@@ -2129,10 +2150,10 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_038",
     assetInstanceId: "ai_023",
-    testedBy: "",
-    testedByUserId: "",
+    testedBy: "Demo Testing Team",
+    testedByUserId: "usr_001",
     testDate: "2026-03-31",
-    result: "pending",
+    result: "pass",
     notes: "",
     attachments: [],
     nextTestDate: "2026-06-15",
@@ -2142,10 +2163,10 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_039",
     assetInstanceId: "ai_026",
-    testedBy: "",
-    testedByUserId: "",
+    testedBy: "Demo Testing Team",
+    testedByUserId: "usr_001",
     testDate: "2026-03-31",
-    result: "pending",
+    result: "pass",
     notes: "",
     attachments: [],
     nextTestDate: "2026-09-01",
@@ -2155,10 +2176,10 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_040",
     assetInstanceId: "ai_031",
-    testedBy: "",
-    testedByUserId: "",
+    testedBy: "Demo Testing Team",
+    testedByUserId: "usr_001",
     testDate: "2026-03-31",
-    result: "pending",
+    result: "pass",
     notes: "",
     attachments: [],
     nextTestDate: "2026-07-31",
@@ -2168,10 +2189,10 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_041",
     assetInstanceId: "ai_033",
-    testedBy: "",
-    testedByUserId: "",
+    testedBy: "Demo Testing Team",
+    testedByUserId: "usr_001",
     testDate: "2026-03-31",
-    result: "pending",
+    result: "pass",
     notes: "",
     attachments: [],
     nextTestDate: "2026-05-01",
@@ -2181,10 +2202,10 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_042",
     assetInstanceId: "ai_034",
-    testedBy: "",
-    testedByUserId: "",
+    testedBy: "Demo Testing Team",
+    testedByUserId: "usr_001",
     testDate: "2026-03-31",
-    result: "pending",
+    result: "pass",
     notes: "",
     attachments: [],
     nextTestDate: "2026-10-01",
@@ -2193,7 +2214,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   },
 ];
 
-// ─── Demo Notifications ───────────────────────────────────────────────────────
+// ─── Demo Notifications ─────────────────────────────────────────��─────────────
 export const DEMO_NOTIFICATIONS: Notification[] = [
   {
     id: "ntf_001",

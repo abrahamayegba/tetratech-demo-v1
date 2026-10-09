@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   getSites,
   getAssetInstances,
@@ -40,8 +41,6 @@ import Link from "next/link";
 import {
   formatDistanceToNow,
   isPast,
-  isWithinInterval,
-  addDays,
 } from "date-fns";
 import { useAuth } from "@/contexts/auth-context";
 import {
@@ -56,14 +55,24 @@ import {
   Pie,
   Cell,
   Legend,
+  LabelList,
 } from "recharts";
 
 const GREEN = "#16a34a";
 const RED = "#dc2626";
+const BLUE = "#2563eb";
 const AMBER = "#d97706";
+
+function getOctoberStatus(index: number) {
+  if (index < 3) return "noTest" as const;
+  if (index < 10) return "scheduled" as const;
+  if (index % 7 === 0) return "fail" as const;
+  return "pass" as const;
+}
 
 export default function DashboardPage() {
   const { user } = useAuth();
+  const router = useRouter();
   const [sites, setSites] = useState<Site[]>([]);
   const [instances, setInstances] = useState<AssetInstance[]>([]);
   const [tests, setTests] = useState<AssetTest[]>([]);
@@ -82,32 +91,23 @@ export default function DashboardPage() {
 
   const activeSites = sites.filter((s) => s.status === "active").length;
   const totalAssets = instances.length;
-  const passedTests = tests.filter((t) => t.result === "pass").length;
-  const failedTests = tests.filter((t) => t.result === "fail").length;
+  const octoberStatuses = instances.map((instance) => ({
+    instance,
+    status:
+      instance.lastTestResult === "pending"
+        ? ("scheduled" as const)
+        : instance.lastTestResult === "pass" || instance.lastTestResult === "fail"
+          ? instance.lastTestResult
+          : ("noTest" as const),
+  }));
+  const passedTests = octoberStatuses.filter((item) => item.status === "pass").length;
+  const failedTests = octoberStatuses.filter((item) => item.status === "fail").length;
+  const scheduledTests = octoberStatuses.filter((item) => item.status === "scheduled").length;
+  const noTestAssets = octoberStatuses.filter((item) => item.status === "noTest").length;
 
-  // Assets with no test at all or overdue for testing
-  const noTestAssets = instances.filter(
-    (i) =>
-      !i.lastTestResult ||
-      i.lastTestResult === "pending" ||
-      (i.nextTestDue && isPast(new Date(i.nextTestDue))),
-  ).length;
+  const overdueAssets = octoberStatuses.filter((item) => item.status === "noTest").length;
 
-  const overdueAssets = instances.filter(
-    (i) =>
-      i.nextTestDue &&
-      isPast(new Date(i.nextTestDue)) &&
-      i.lastTestResult !== "pending",
-  ).length;
-
-  const dueSoon = instances.filter((i) => {
-    if (!i.nextTestDue) return false;
-    const due = new Date(i.nextTestDue);
-    return isWithinInterval(due, {
-      start: new Date(),
-      end: addDays(new Date(), 30),
-    });
-  }).length;
+  const dueSoon = octoberStatuses.filter((item) => item.status === "scheduled").length;
 
   const unreadNotifications = notifications.filter((n) => !n.read).length;
   const openJobs = reactiveJobs.filter((j) => j.status === "open").length;
@@ -125,37 +125,60 @@ export default function DashboardPage() {
     return p.plannedStartDate <= todayStr && p.plannedEndDate >= todayStr;
   });
 
-  // Combo bar chart: pass / fail / no-test per site (active sites only)
+  // Keep the chart tied to the same asset records shown in Live Assets.
   const siteChartData = sites
-    .filter((s) => s.status === "active")
+    .filter((site) => site.status === "active")
     .map((site) => {
-      const siteInstances = instances.filter((i) => i.siteId === site.id);
-      const pass = siteInstances.filter(
-        (i) => i.lastTestResult === "pass",
-      ).length;
-      const fail = siteInstances.filter(
-        (i) => i.lastTestResult === "fail",
-      ).length;
-      const noTest = siteInstances.filter(
-        (i) =>
-          !i.lastTestResult ||
-          i.lastTestResult === "pending" ||
-          (i.nextTestDue && isPast(new Date(i.nextTestDue))),
-      ).length;
+      const statusCounts = instances
+        .filter((instance) => instance.siteId === site.id)
+        .reduce(
+          (counts: Record<"pass" | "fail" | "scheduled" | "noTest", number>, instance) => {
+            const status =
+              instance.lastTestResult === "pending"
+                ? "scheduled"
+                : instance.lastTestResult === "pass" || instance.lastTestResult === "fail"
+                  ? instance.lastTestResult
+                  : "noTest";
+            counts[status] += 1;
+            return counts;
+          },
+          { pass: 0, fail: 0, scheduled: 0, noTest: 0 },
+        );
       const shortName = site.name
         .replace(
           / (Supported Living|Care Home|Day Centre|Resource Centre|Residential|Hub|Crown House)$/i,
           "",
         )
         .slice(0, 14);
-      return { site: shortName, pass, fail, noTest };
+      return { site: shortName, siteId: site.id, ...statusCounts };
     });
 
-  // Pie data — pass vs fail vs no test
   const pieData = [
     { name: "Pass", value: passedTests },
     { name: "Fail", value: failedTests },
+    { name: "Scheduled", value: scheduledTests },
     { name: "No Test", value: noTestAssets },
+  ];
+
+  // Deterministic year-to-date demo history. October uses the live October
+  // totals above so the two dashboard views remain consistent.
+  const yearToDateData = [
+    { month: "Jan", pass: 38, fail: 1, scheduled: 3, noTest: 0 },
+    { month: "Feb", pass: 41, fail: 1, scheduled: 2, noTest: 0 },
+    { month: "Mar", pass: 44, fail: 2, scheduled: 2, noTest: 1 },
+    { month: "Apr", pass: 46, fail: 1, scheduled: 3, noTest: 0 },
+    { month: "May", pass: 49, fail: 1, scheduled: 3, noTest: 0 },
+    { month: "Jun", pass: 51, fail: 2, scheduled: 2, noTest: 1 },
+    { month: "Jul", pass: 53, fail: 1, scheduled: 3, noTest: 0 },
+    { month: "Aug", pass: 55, fail: 2, scheduled: 2, noTest: 0 },
+    { month: "Sep", pass: 57, fail: 1, scheduled: 2, noTest: 1 },
+    {
+      month: "Oct",
+      pass: passedTests,
+      fail: failedTests,
+      scheduled: scheduledTests,
+      noTest: noTestAssets,
+    },
   ];
 
   // Recent notifications
@@ -268,7 +291,7 @@ export default function DashboardPage() {
         <Card className="lg:col-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-semibold">
-              Asset Test Status by Site
+              October Asset Test Status by Site
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -277,6 +300,10 @@ export default function DashboardPage() {
                 data={siteChartData}
                 margin={{ top: 4, right: 8, left: -20, bottom: 0 }}
                 layout="vertical"
+                onClick={(event) => {
+                  const siteId = event?.activePayload?.[0]?.payload?.siteId;
+                  if (siteId) router.push(`/assets?site=${siteId}`);
+                }}
               >
                 <CartesianGrid
                   strokeDasharray="3 3"
@@ -309,6 +336,7 @@ export default function DashboardPage() {
                   radius={[0, 0, 0, 0]}
                 />
                 <Bar dataKey="fail" stackId="a" fill={RED} name="Fail" />
+                <Bar dataKey="scheduled" stackId="a" fill={BLUE} name="Scheduled" />
                 <Bar
                   dataKey="noTest"
                   stackId="a"
@@ -325,7 +353,7 @@ export default function DashboardPage() {
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-semibold">
-              Overall Pass / Fail / No Test
+              October Test Status
             </CardTitle>
           </CardHeader>
           <CardContent className="flex items-center justify-center">
@@ -344,6 +372,7 @@ export default function DashboardPage() {
                 >
                   <Cell fill={GREEN} />
                   <Cell fill={RED} />
+                  <Cell fill={BLUE} />
                   <Cell fill={AMBER} />
                 </Pie>
 
@@ -353,6 +382,41 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
       </div>
+
+      {/* Full-width year-to-date history */}
+      <Card>
+        <CardHeader className="pb-2">
+          <CardTitle className="text-sm font-semibold">
+            Year-to-Date Asset Test Status
+          </CardTitle>
+          <p className="text-xs text-muted-foreground">
+            Monthly test activity across all sites for 2026. October matches the live October status totals above.
+          </p>
+        </CardHeader>
+        <CardContent>
+          <ResponsiveContainer width="100%" height={320}>
+            <BarChart data={yearToDateData} margin={{ top: 8, right: 16, left: -12, bottom: 0 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" vertical={false} />
+              <XAxis dataKey="month" tick={{ fontSize: 11 }} />
+              <YAxis tick={{ fontSize: 11 }} allowDecimals={false} />
+              <Tooltip />
+              <Legend iconSize={10} iconType="circle" wrapperStyle={{ fontSize: 11 }} />
+  <Bar dataKey="pass" stackId="year" fill={GREEN} name="Pass">
+    <LabelList dataKey="pass" position="center" fill="#ffffff" fontSize={10} formatter={(value) => (value ? value : "")} />
+  </Bar>
+  <Bar dataKey="fail" stackId="year" fill={RED} name="Fail">
+    <LabelList dataKey="fail" position="center" fill="#ffffff" fontSize={10} formatter={(value) => (value ? value : "")} />
+  </Bar>
+  <Bar dataKey="scheduled" stackId="year" fill={BLUE} name="Scheduled">
+    <LabelList dataKey="scheduled" position="center" fill="#ffffff" fontSize={10} formatter={(value) => (value ? value : "")} />
+  </Bar>
+  <Bar dataKey="noTest" stackId="year" fill={AMBER} name="No Test" radius={[4, 4, 0, 0]}>
+    <LabelList dataKey="noTest" position="center" fill="#ffffff" fontSize={10} formatter={(value) => (value ? value : "")} />
+  </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </CardContent>
+      </Card>
 
       {/* Reactive jobs strip */}
       {openJobs > 0 && (
