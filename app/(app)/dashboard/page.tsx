@@ -159,6 +159,27 @@ export default function DashboardPage() {
     { name: "No Test", value: noTestAssets },
   ];
 
+  // Deterministic year-to-date demo history. October uses the live October
+  // totals above so the two dashboard views remain consistent.
+  const yearToDateData = [
+    { month: "Jan", pass: 38, fail: 1, scheduled: 3, noTest: 0 },
+    { month: "Feb", pass: 41, fail: 1, scheduled: 2, noTest: 0 },
+    { month: "Mar", pass: 44, fail: 2, scheduled: 2, noTest: 1 },
+    { month: "Apr", pass: 46, fail: 1, scheduled: 3, noTest: 0 },
+    { month: "May", pass: 49, fail: 1, scheduled: 3, noTest: 0 },
+    { month: "Jun", pass: 51, fail: 2, scheduled: 2, noTest: 1 },
+    { month: "Jul", pass: 53, fail: 1, scheduled: 3, noTest: 0 },
+    { month: "Aug", pass: 55, fail: 2, scheduled: 2, noTest: 0 },
+    { month: "Sep", pass: 57, fail: 1, scheduled: 2, noTest: 1 },
+    {
+      month: "Oct",
+      pass: passedTests,
+      fail: failedTests,
+      scheduled: scheduledTests,
+      noTest: noTestAssets,
+    },
+  ];
+
   // Recent notifications
   const recentNotifications = notifications.slice(0, 4);
 
@@ -360,6 +381,33 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
       </div>
+
+      {/* Full-width year-to-date history */}
+      <Card>
+        <CardHeader className="pb-2">
+          <CardTitle className="text-sm font-semibold">
+            Year-to-Date Asset Test Status
+          </CardTitle>
+          <p className="text-xs text-muted-foreground">
+            Monthly test activity across all sites for 2026. October matches the live October status totals above.
+          </p>
+        </CardHeader>
+        <CardContent>
+          <ResponsiveContainer width="100%" height={320}>
+            <BarChart data={yearToDateData} margin={{ top: 8, right: 16, left: -12, bottom: 0 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" vertical={false} />
+              <XAxis dataKey="month" tick={{ fontSize: 11 }} />
+              <YAxis tick={{ fontSize: 11 }} allowDecimals={false} />
+              <Tooltip />
+              <Legend iconSize={10} iconType="circle" wrapperStyle={{ fontSize: 11 }} />
+              <Bar dataKey="pass" stackId="year" fill={GREEN} name="Pass" />
+              <Bar dataKey="fail" stackId="year" fill={RED} name="Fail" />
+              <Bar dataKey="scheduled" stackId="year" fill={BLUE} name="Scheduled" />
+              <Bar dataKey="noTest" stackId="year" fill={AMBER} name="No Test" radius={[4, 4, 0, 0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </CardContent>
+      </Card>
 
       {/* Reactive jobs strip */}
       {openJobs > 0 && (
