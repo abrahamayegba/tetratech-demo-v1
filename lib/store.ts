@@ -46,7 +46,7 @@ const KEYS = {
   SEEDED: "es_seeded",
 };
 
-const SEED_VERSION = "v8"; // bump this to reseed all demo data
+const SEED_VERSION = "v9"; // bump this to reseed all demo data
 
 // ─── Seed ─────────────────────────────────────────────────────────────────────
 export function seedIfNeeded(): void {

@@ -123,7 +123,7 @@ export default function DashboardPage() {
     .map((site, siteIndex) => {
       const siteInstances = instances.filter((instance) => instance.siteId === site.id);
       const statusCounts = Array.from({ length: Math.max(siteInstances.length, 4) }).reduce(
-        (counts, _item, instanceIndex) => {
+        (counts: Record<"pass" | "fail" | "scheduled" | "noTest", number>, _item, instanceIndex) => {
           const status =
             siteIndex < 3 && instanceIndex === 0
               ? "noTest"

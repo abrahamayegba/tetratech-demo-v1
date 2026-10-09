@@ -113,9 +113,8 @@ export default function AssetsPage() {
       site?.name.toLowerCase().includes(q);
     const matchSite = siteFilter === "all" || i.siteId === siteFilter;
     const matchType = typeFilter === "all" || i.assetTypeId === typeFilter;
-    // For result filter: if overdue, treat as "pending"; otherwise use actual result
-    const isOverdue = i.nextTestDue && isPast(new Date(i.nextTestDue));
-    const effectiveResult = isOverdue ? "pending" : i.lastTestResult;
+    // No Test is an explicit status; an overdue asset is not automatically a missed test.
+    const effectiveResult = i.lastTestResult ?? "pending";
     const matchResult =
       resultFilter === "all" ||
       effectiveResult === resultFilter ||
@@ -246,10 +245,8 @@ export default function AssetsPage() {
                         const isOverdue =
                           instance.nextTestDue &&
                           isPast(new Date(instance.nextTestDue));
-                        // If overdue, treat as "pending" (no test), otherwise use actual result
-                        const result = isOverdue
-                          ? "pending"
-                          : (instance.lastTestResult ?? "pending");
+                        // No Test is explicit; overdue dates remain visible without changing the result.
+                        const result = instance.lastTestResult ?? "pending";
                         const rc =
                           RESULT_CONFIG[result as keyof typeof RESULT_CONFIG] ??
                           RESULT_CONFIG.pending;
