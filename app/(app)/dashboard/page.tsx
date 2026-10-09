@@ -55,6 +55,7 @@ import {
   Pie,
   Cell,
   Legend,
+  LabelList,
 } from "recharts";
 
 const GREEN = "#16a34a";
@@ -400,10 +401,18 @@ export default function DashboardPage() {
               <YAxis tick={{ fontSize: 11 }} allowDecimals={false} />
               <Tooltip />
               <Legend iconSize={10} iconType="circle" wrapperStyle={{ fontSize: 11 }} />
-              <Bar dataKey="pass" stackId="year" fill={GREEN} name="Pass" />
-              <Bar dataKey="fail" stackId="year" fill={RED} name="Fail" />
-              <Bar dataKey="scheduled" stackId="year" fill={BLUE} name="Scheduled" />
-              <Bar dataKey="noTest" stackId="year" fill={AMBER} name="No Test" radius={[4, 4, 0, 0]} />
+  <Bar dataKey="pass" stackId="year" fill={GREEN} name="Pass">
+    <LabelList dataKey="pass" position="center" fill="#ffffff" fontSize={10} formatter={(value) => (value ? value : "")} />
+  </Bar>
+  <Bar dataKey="fail" stackId="year" fill={RED} name="Fail">
+    <LabelList dataKey="fail" position="center" fill="#ffffff" fontSize={10} formatter={(value) => (value ? value : "")} />
+  </Bar>
+  <Bar dataKey="scheduled" stackId="year" fill={BLUE} name="Scheduled">
+    <LabelList dataKey="scheduled" position="center" fill="#ffffff" fontSize={10} formatter={(value) => (value ? value : "")} />
+  </Bar>
+  <Bar dataKey="noTest" stackId="year" fill={AMBER} name="No Test" radius={[4, 4, 0, 0]}>
+    <LabelList dataKey="noTest" position="center" fill="#ffffff" fontSize={10} formatter={(value) => (value ? value : "")} />
+  </Bar>
             </BarChart>
           </ResponsiveContainer>
         </CardContent>
