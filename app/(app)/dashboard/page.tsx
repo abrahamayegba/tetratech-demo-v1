@@ -90,9 +90,14 @@ export default function DashboardPage() {
 
   const activeSites = sites.filter((s) => s.status === "active").length;
   const totalAssets = instances.length;
-  const octoberStatuses = instances.map((instance, index) => ({
+  const octoberStatuses = instances.map((instance) => ({
     instance,
-    status: getOctoberStatus(index),
+    status:
+      instance.lastTestResult === "pending"
+        ? ("scheduled" as const)
+        : instance.lastTestResult === "pass" || instance.lastTestResult === "fail"
+          ? instance.lastTestResult
+          : ("noTest" as const),
   }));
   const passedTests = octoberStatuses.filter((item) => item.status === "pass").length;
   const failedTests = octoberStatuses.filter((item) => item.status === "fail").length;
@@ -119,22 +124,25 @@ export default function DashboardPage() {
     return p.plannedStartDate <= todayStr && p.plannedEndDate >= todayStr;
   });
 
-  // October status counts are spread across every active site for the demo.
+  // Keep the chart tied to the same asset records shown in Live Assets.
   const siteChartData = sites
     .filter((site) => site.status === "active")
-    .map((site, siteIndex) => {
-      const siteInstances = instances.filter((instance) => instance.siteId === site.id);
-      const statusCounts = Array.from({ length: Math.max(siteInstances.length, 4) }).reduce(
-        (counts: Record<"pass" | "fail" | "scheduled" | "noTest", number>, _item, instanceIndex) => {
-          const status =
-            siteIndex < 3 && instanceIndex === 0
-              ? "noTest"
-              : getOctoberStatus(siteIndex * 4 + instanceIndex + 3);
-          counts[status] += 1;
-          return counts;
-        },
-        { pass: 0, fail: 0, scheduled: 0, noTest: 0 },
-      );
+    .map((site) => {
+      const statusCounts = instances
+        .filter((instance) => instance.siteId === site.id)
+        .reduce(
+          (counts: Record<"pass" | "fail" | "scheduled" | "noTest", number>, instance) => {
+            const status =
+              instance.lastTestResult === "pending"
+                ? "scheduled"
+                : instance.lastTestResult === "pass" || instance.lastTestResult === "fail"
+                  ? instance.lastTestResult
+                  : "noTest";
+            counts[status] += 1;
+            return counts;
+          },
+          { pass: 0, fail: 0, scheduled: 0, noTest: 0 },
+        );
       const shortName = site.name
         .replace(
           / (Supported Living|Care Home|Day Centre|Resource Centre|Residential|Hub|Crown House)$/i,

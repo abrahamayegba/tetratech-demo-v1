@@ -68,6 +68,11 @@ const RESULT_CONFIG = {
     class: "border-red-200 text-red-700 bg-red-50",
   },
   pending: {
+    label: "Scheduled",
+    icon: Clock,
+    class: "border-blue-200 text-blue-700 bg-blue-50",
+  },
+  noTest: {
     label: "No Test",
     icon: Clock,
     class: "border-amber-200 text-amber-700 bg-amber-50",
@@ -117,12 +122,11 @@ export default function AssetsPage() {
       site?.name.toLowerCase().includes(q);
     const matchSite = siteFilter === "all" || i.siteId === siteFilter;
     const matchType = typeFilter === "all" || i.assetTypeId === typeFilter;
-    // No Test is an explicit status; an overdue asset is not automatically a missed test.
-    const effectiveResult = i.lastTestResult ?? "pending";
-    const matchResult =
-      resultFilter === "all" ||
-      effectiveResult === resultFilter ||
-      (!effectiveResult && resultFilter === "pending");
+    const effectiveResult =
+      i.lastTestResult === "pending"
+        ? "pending"
+        : i.lastTestResult ?? "noTest";
+    const matchResult = resultFilter === "all" || effectiveResult === resultFilter;
     return matchSearch && matchSite && matchType && matchResult;
   });
 
@@ -196,7 +200,8 @@ export default function AssetsPage() {
             <SelectItem value="all">All Results</SelectItem>
             <SelectItem value="pass">Pass</SelectItem>
             <SelectItem value="fail">Fail</SelectItem>
-            <SelectItem value="pending">No Test</SelectItem>
+            <SelectItem value="pending">Scheduled</SelectItem>
+            <SelectItem value="noTest">No Test</SelectItem>
           </SelectContent>
         </Select>
       </div>
@@ -249,8 +254,10 @@ export default function AssetsPage() {
                         const isOverdue =
                           instance.nextTestDue &&
                           isPast(new Date(instance.nextTestDue));
-                        // No Test is explicit; overdue dates remain visible without changing the result.
-                        const result = instance.lastTestResult ?? "pending";
+                        const result =
+                          instance.lastTestResult === "pending"
+                            ? "pending"
+                            : instance.lastTestResult ?? "noTest";
                         const rc =
                           RESULT_CONFIG[result as keyof typeof RESULT_CONFIG] ??
                           RESULT_CONFIG.pending;
@@ -302,7 +309,7 @@ export default function AssetsPage() {
                             <td className="px-4 py-2.5">
                               <div className="flex items-center gap-1.5">
                                 <ResultIcon
-                                  className={`w-3.5 h-3.5 ${result === "pass" ? "text-green-600" : result === "fail" ? "text-red-600" : "text-amber-600"}`}
+                                  className={`w-3.5 h-3.5 ${result === "pass" ? "text-green-600" : result === "fail" ? "text-red-600" : result === "pending" ? "text-blue-600" : "text-amber-600"}`}
                                 />
                                 <Badge
                                   variant="outline"
