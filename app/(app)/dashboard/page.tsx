@@ -160,8 +160,7 @@ export default function DashboardPage() {
     { name: "No Test", value: noTestAssets },
   ];
 
-  // Deterministic year-to-date demo history. October uses the live October
-  // totals above so the two dashboard views remain consistent.
+  // Deterministic year-to-date demo history through September.
   const yearToDateData = [
     { month: "Jan", pass: 38, fail: 1, scheduled: 3, noTest: 0 },
     { month: "Feb", pass: 41, fail: 1, scheduled: 2, noTest: 0 },
@@ -172,13 +171,6 @@ export default function DashboardPage() {
     { month: "Jul", pass: 53, fail: 1, scheduled: 3, noTest: 0 },
     { month: "Aug", pass: 55, fail: 2, scheduled: 2, noTest: 0 },
     { month: "Sep", pass: 57, fail: 1, scheduled: 2, noTest: 1 },
-    {
-      month: "Oct",
-      pass: passedTests,
-      fail: failedTests,
-      scheduled: scheduledTests,
-      noTest: noTestAssets,
-    },
   ];
 
   // Recent notifications
@@ -390,7 +382,7 @@ export default function DashboardPage() {
             Year-to-Date Asset Test Status
           </CardTitle>
           <p className="text-xs text-muted-foreground">
-            Monthly test activity across all sites for 2026. October matches the live October status totals above.
+            Monthly test activity across all sites from January through September 2026.
           </p>
         </CardHeader>
         <CardContent>
@@ -402,16 +394,16 @@ export default function DashboardPage() {
               <Tooltip />
               <Legend iconSize={10} iconType="circle" wrapperStyle={{ fontSize: 11 }} />
   <Bar dataKey="pass" stackId="year" fill={GREEN} name="Pass">
-    <LabelList dataKey="pass" position="center" fill="#ffffff" fontSize={10} formatter={(value) => (value ? value : "")} />
+    <LabelList dataKey="pass" position="center" fill="#ffffff" fontSize={10} formatter={(value: number | string | undefined) => (value ? value : "")} />
   </Bar>
   <Bar dataKey="fail" stackId="year" fill={RED} name="Fail">
-    <LabelList dataKey="fail" position="center" fill="#ffffff" fontSize={10} formatter={(value) => (value ? value : "")} />
+    <LabelList dataKey="fail" position="center" fill="#ffffff" fontSize={10} formatter={(value: number | string | undefined) => (value ? value : "")} />
   </Bar>
   <Bar dataKey="scheduled" stackId="year" fill={BLUE} name="Scheduled">
-    <LabelList dataKey="scheduled" position="center" fill="#ffffff" fontSize={10} formatter={(value) => (value ? value : "")} />
+    <LabelList dataKey="scheduled" position="center" fill="#ffffff" fontSize={10} formatter={(value: number | string | undefined) => (value ? value : "")} />
   </Bar>
   <Bar dataKey="noTest" stackId="year" fill={AMBER} name="No Test" radius={[4, 4, 0, 0]}>
-    <LabelList dataKey="noTest" position="center" fill="#ffffff" fontSize={10} formatter={(value) => (value ? value : "")} />
+    <LabelList dataKey="noTest" position="center" fill="#ffffff" fontSize={10} formatter={(value: number | string | undefined) => (value ? value : "")} />
   </Bar>
             </BarChart>
           </ResponsiveContainer>
