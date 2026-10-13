@@ -943,7 +943,7 @@ export const DEMO_ASSET_INSTANCES: AssetInstance[] = [
     assetTypeId: "at_006",
     siteId: "site_001",
     serialNumber: "LO-GR-001",
-    location: "Bedroom 3 En-suite",
+    location: "Room 3 En-suite",
     installDate: "2023-01-20",
     nextTestDue: "2025-07-20",
     lastTestDate: "2025-01-20",
@@ -955,7 +955,7 @@ export const DEMO_ASSET_INSTANCES: AssetInstance[] = [
     assetTypeId: "at_007",
     siteId: "site_001",
     serialNumber: "MH-GR-001",
-    location: "Bedroom 1",
+    location: "Room 1",
     installDate: "2022-11-10",
     nextTestDue: "2025-05-10",
     lastTestDate: "2024-11-10",
@@ -1037,13 +1037,13 @@ export const DEMO_ASSET_INSTANCES: AssetInstance[] = [
     createdAt: "2023-06-01T09:00:00Z",
   },
 
-  // Glasgow Hospice extra assets (site_001)
+  // Glasgow Operations Centre extra assets (site_001)
   {
     id: "ai_012",
     assetTypeId: "at_001",
     siteId: "site_001",
     serialNumber: "FE-GH-002",
-    location: "Ward Corridor",
+    location: "Main Corridor",
     installDate: "2022-07-01",
     nextTestDue: "2026-07-01",
     lastTestDate: "2025-07-01",
@@ -1147,7 +1147,7 @@ export const DEMO_ASSET_INSTANCES: AssetInstance[] = [
     createdAt: "2023-06-01T09:00:00Z",
   },
 
-  // Edinburgh Hospice extra assets (site_002)
+  // Edinburgh Technical Office extra assets (site_002)
   {
     id: "ai_021",
     assetTypeId: "at_001",
@@ -1165,7 +1165,7 @@ export const DEMO_ASSET_INSTANCES: AssetInstance[] = [
     assetTypeId: "at_006",
     siteId: "site_002",
     serialNumber: "LO-EH-001",
-    location: "Bedroom 2",
+    location: "Room 2",
     installDate: "2023-05-01",
     nextTestDue: "2025-11-01",
     lastTestDate: "2025-05-01",
@@ -2214,7 +2214,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   },
 ];
 
-// ─── Demo Notifications ─────────────────────────────────────────��─────────────
+// ─── Demo Notifications ────────────��────────────────────────────��─────────────
 export const DEMO_NOTIFICATIONS: Notification[] = [
   {
     id: "ntf_001",
@@ -2475,9 +2475,9 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
   {
     id: "job_007",
     siteId: "site_001",
-    title: "Ceiling Tile Fallen in Ward Corridor",
+    title: "Ceiling Tile Fallen in Main Corridor",
     description:
-      "A ceiling tile has fallen in the main ward corridor near Room 4. Area has been cordoned off. Needs inspection and replacement.",
+      "A ceiling tile has fallen in the main corridor near the collaboration area. Area has been cordoned off. Needs inspection and replacement.",
     priority: "high",
     status: "open",
     source: "portal",
@@ -2541,9 +2541,9 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
   {
     id: "job_010",
     siteId: "site_002",
-    title: "Smoke Detector Fault Light — Nurse Call Room",
+    title: "Smoke Detector Fault Light — Meeting Room",
     description:
-      "Smoke detector in the nurse call room is showing a fault light. Device is 4 years old. Needs inspection and possible replacement.",
+      "Smoke detector in the meeting room is showing a fault light. Device is 4 years old. Needs inspection and possible replacement.",
     priority: "high",
     status: "open",
     source: "portal",
@@ -2589,9 +2589,9 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
   {
     id: "pj_002",
     siteId: "site_001",
-    title: "6-Monthly LOLER Hoist Inspection",
+    title: "6-Monthly LOLER Goods Lift Inspection",
     description:
-      "Thorough examination of ceiling track hoist in Bedroom 3 and mobile hoist in Bedroom 1 in compliance with LOLER regulations.",
+      "Thorough examination of the goods lift and workshop lifting equipment in compliance with LOLER regulations.",
     priority: "high",
     status: "scheduled",
     frequency: "biannual",
@@ -2631,7 +2631,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     siteId: "site_001",
     title: "Monthly Legionella Temperature Checks",
     description:
-      "Monthly sentinel outlet and calorifier temperature monitoring checks per SFG20 32-05 and SFG20 32-02 for Legionella control.",
+      "Monthly sentinel outlet and calorifier temperature monitoring checks per SFG20 32-05 and SFG20 32-02 for water hygiene control.",
     priority: "medium",
     status: "scheduled",
     frequency: "monthly",
@@ -2671,7 +2671,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     siteId: "site_001",
     title: "Monthly Water Temperature Checks",
     description:
-      "Monthly sentinel outlet and calorifier temperature monitoring checks per SFG20 32-05 and 32-02 — Glasgow Hospice.",
+      "Monthly sentinel outlet and calorifier temperature monitoring checks per SFG20 32-05 and 32-02 — Glasgow Operations Centre.",
     priority: "medium",
     status: "in-progress",
     frequency: "monthly",
@@ -2689,9 +2689,9 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
   {
     id: "pj_012",
     siteId: "site_002",
-    title: "PAT Testing — Edinburgh Hospice",
+    title: "PAT Testing — Edinburgh Technical Office",
     description:
-      "Annual portable appliance testing of all in-service electrical equipment across Edinburgh Hospice per SFG20 42-01.",
+      "Annual portable appliance testing of all in-service electrical equipment across the Edinburgh office per SFG20 42-01.",
     priority: "medium",
     status: "in-progress",
     frequency: "annual",
@@ -2709,9 +2709,9 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
   {
     id: "pj_013",
     siteId: "site_001",
-    title: "Monthly Legionella Checks — Glasgow Hospice",
+    title: "Monthly Water Hygiene Checks — Glasgow Office",
     description:
-      "Monthly Legionella temperature monitoring at all sentinel outlets — Glasgow Hospice.",
+      "Monthly water hygiene temperature monitoring at all sentinel outlets — Glasgow office.",
     priority: "medium",
     status: "scheduled",
     frequency: "monthly",
@@ -2730,7 +2730,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     siteId: "site_002",
     title: "6-Month LOLER Inspection — Edinburgh Hoists",
     description:
-      "Six-monthly thorough examination of ceiling track hoist in Bedroom 2 and mobile hoist in physiotherapy room per LOLER regulations.",
+      "Six-monthly thorough examination of the goods lift and mobile lifting equipment in the workshop per LOLER regulations.",
     priority: "high",
     status: "scheduled",
     frequency: "biannual",
@@ -2740,7 +2740,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     assignedTo: "Highlands Lifting & LOLER Ltd",
     assignedCompanyId: "sc_003",
     notes:
-      "LOLER certificates to be signed on site. Ward to be notified prior.",
+      "LOLER certificates to be signed on site. Facilities team to be notified prior.",
     attachments: [],
     createdAt: "2026-10-02T09:00:00Z",
     updatedAt: "2026-10-02T09:00:00Z",
@@ -2800,7 +2800,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     assignedTo: "Spark Electrical Testing Ltd",
     assignedCompanyId: "sc_004",
     notes:
-      "Partial isolation required. Coordinate with ward sister to minimise patient disruption.",
+      "Partial isolation required. Coordinate with site manager to minimise site operations disruption.",
     attachments: [],
     createdAt: "2026-10-07T09:00:00Z",
     updatedAt: "2026-10-07T09:00:00Z",
@@ -2810,7 +2810,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     siteId: "site_002",
     title: "Monthly Legionella Temperature Checks",
     description:
-      "Monthly sentinel outlet and calorifier temperature monitoring checks for Edinburgh Hospice.",
+      "Monthly sentinel outlet and calorifier temperature monitoring checks for Edinburgh Technical Office.",
     priority: "medium",
     status: "scheduled",
     frequency: "monthly",
@@ -2859,7 +2859,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     createdByUserId: "usr_001",
     assignedTo: "Caledonian Fire & Safety Ltd",
     assignedCompanyId: "sc_002",
-    notes: "Ward staff to be notified before any alarm activation.",
+    notes: "Main staff to be notified before any alarm activation.",
     attachments: [],
     createdAt: "2026-10-01T09:00:00Z",
     updatedAt: "2026-10-01T09:00:00Z",
@@ -2898,7 +2898,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     createdByUserId: "usr_001",
     assignedTo: "Malcolm Ross",
     notes:
-      "Call point Zone 3 (Ward B corridor) to be tested this week. Test at 10:00.",
+      "Call point Zone 3 (Main B corridor) to be tested this week. Test at 10:00.",
     attachments: [],
     createdAt: "2026-10-05T09:00:00Z",
     updatedAt: "2026-10-05T09:00:00Z",
@@ -2908,7 +2908,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     siteId: "site_002",
     title: "Emergency Stop Button Quarterly Check",
     description:
-      "Quarterly inspection and test of emergency stop buttons and interlock systems throughout Edinburgh Hospice per SFG20 14-18.",
+      "Quarterly inspection and test of emergency stop buttons and interlock systems throughout Edinburgh Technical Office per SFG20 14-18.",
     priority: "medium",
     status: "scheduled",
     frequency: "quarterly",
@@ -2967,7 +2967,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     siteId: "site_001",
     title: "Monthly Water Temperature Checks — May",
     description:
-      "Monthly sentinel outlet and calorifier temperature monitoring for Legionella control — Glasgow Hospice.",
+      "Monthly sentinel outlet and calorifier temperature monitoring for Legionella control — Glasgow Operations Centre.",
     priority: "medium",
     status: "scheduled",
     frequency: "monthly",
@@ -3054,9 +3054,9 @@ export const DEMO_WORKS_COMPLETED: WorksCompleted[] = [
   {
     id: "wc_002",
     siteId: "site_002",
-    jobTitle: "Annual Emergency Lighting Function Test — Edinburgh Hospice",
+    jobTitle: "Annual Emergency Lighting Function Test — Edinburgh Technical Office",
     workCarriedOut:
-      "Annual and monthly function test of all self-contained emergency lighting fittings across the Edinburgh Hospice. All stairwells, corridors and wards covered. 3 fittings on Ward 2 corridor failed and were replaced with Exiway Quantum fittings. Remaining 47 fittings passed. Test record sheet completed and handed to Michael Shuel on site.",
+      "Annual and monthly function test of all self-contained emergency lighting fittings across the Edinburgh Technical Office. All stairwells, corridors and main areas covered. 3 fittings on Main 2 corridor failed and were replaced with Exiway Quantum fittings. Remaining 47 fittings passed. Test record sheet completed and handed to Michael Shuel on site.",
     completedBy: "Stuart Wallace — Caledonian Fire & Safety Ltd",
     completedDate: "2026-04-27",
     linkedJobType: "permit",
@@ -3064,7 +3064,7 @@ export const DEMO_WORKS_COMPLETED: WorksCompleted[] = [
     permitRef: "PTW-PMT005",
     startDate: "2026-04-27",
     endDate: "2026-04-27",
-    locationOnSite: "All areas — stairwells, corridors, wards",
+    locationOnSite: "All areas — stairwells, corridors, main areas",
     attachments: [],
     approvalStatus: "approved",
     approvedBy: "Michael Shuel",
@@ -3079,9 +3079,9 @@ export const DEMO_WORKS_COMPLETED: WorksCompleted[] = [
   {
     id: "wc_003",
     siteId: "site_002",
-    jobTitle: "Annual PAT Testing — Edinburgh Hospice",
+    jobTitle: "Annual PAT Testing — Edinburgh Technical Office",
     workCarriedOut:
-      "Annual portable appliance testing completed across all office areas, staff room, kitchen and ward common rooms. 67 items tested in total. 64 passed — PASS labels applied. 3 items failed and were immediately removed from service (2x kettles in staff kitchen, 1x fan heater in office 3). Full test register attached. All failed items bagged and labelled for disposal.",
+      "Annual portable appliance testing completed across all office areas, staff room, kitchen and main area common rooms. 67 items tested in total. 64 passed — PASS labels applied. 3 items failed and were immediately removed from service (2x kettles in staff kitchen, 1x fan heater in office 3). Full test register attached. All failed items bagged and labelled for disposal.",
     completedBy: "Dave McAllister — Spark Electrical Testing Ltd",
     completedDate: "2026-04-29",
     linkedJobType: "permit",
@@ -3089,7 +3089,7 @@ export const DEMO_WORKS_COMPLETED: WorksCompleted[] = [
     permitRef: "PTW-PMT008",
     startDate: "2026-04-29",
     endDate: "2026-04-29",
-    locationOnSite: "Staff offices, Staff Room, Kitchen, Ward Common Rooms",
+    locationOnSite: "Staff offices, Staff Room, Kitchen, Main Common Rooms",
     attachments: [],
     approvalStatus: "pending_approval",
     createdAt: "2026-04-29T15:45:00Z",
@@ -3099,9 +3099,9 @@ export const DEMO_WORKS_COMPLETED: WorksCompleted[] = [
   {
     id: "wc_004",
     siteId: "site_001",
-    jobTitle: "Monthly Legionella Temperature Monitoring — Glasgow Hospice",
+    jobTitle: "Monthly Legionella Temperature Monitoring — Glasgow Operations Centre",
     workCarriedOut:
-      "Monthly sentinel outlet and calorifier temperature monitoring completed at Glasgow Hospice. All hot water outlets reading between 52°C–58°C at point of use. Cold water outlets all below 20°C. Calorifier flow and return temperatures within specification. No remedial actions required. Log book signed on site and copy left with site manager.",
+      "Monthly sentinel outlet and calorifier temperature monitoring completed at Glasgow Operations Centre. All hot water outlets reading between 52°C–58°C at point of use. Cold water outlets all below 20°C. Calorifier flow and return temperatures within specification. No remedial actions required. Log book signed on site and copy left with site manager.",
     completedBy: "Derek Fraser — Aqua Solutions Scotland",
     completedDate: "2026-04-29",
     linkedJobType: "permit",
@@ -3241,7 +3241,7 @@ export const DEMO_SUPPLY_CHAIN: SupplyChainCompany[] = [
 
 // ─── Demo Permits ─────────────────────────────────────────────────────────────
 export const DEMO_PERMITS: Permit[] = [
-  // --- Today (2026-04-29): approved permit, Glasgow Hospice ---
+  // --- Today (2026-04-29): approved permit, Glasgow Operations Centre ---
   {
     id: "pmt_001",
     siteId: "site_001",
@@ -3315,7 +3315,7 @@ export const DEMO_PERMITS: Permit[] = [
     declarationName: "Stuart Wallace",
     declarationDate: "2026-04-28",
   },
-  // --- Today (2026-04-29): approved permit, Glasgow Hospice (second contractor) ---
+  // --- Today (2026-04-29): approved permit, Glasgow Operations Centre (second contractor) ---
   {
     id: "pmt_002",
     siteId: "site_001",
@@ -3374,7 +3374,7 @@ export const DEMO_PERMITS: Permit[] = [
     ppeRespirator: false,
     emergencyProcedure:
       "Contact site manager immediately. Isolate affected area if leak occurs.",
-    nearestFirstAid: "Nurses station — Ward B",
+    nearestFirstAid: "Site reception — Main B",
     nearestFireExit: "Plant room fire exit (east side)",
     assemblyPoint: "East car park",
     attachments: [],
@@ -3457,7 +3457,7 @@ export const DEMO_PERMITS: Permit[] = [
     declarationName: "Alan Reid",
     declarationDate: "2026-04-29",
   },
-  // --- Today (2026-04-29): pending permit, Glasgow Hospice ---
+  // --- Today (2026-04-29): pending permit, Glasgow Operations Centre ---
   {
     id: "pmt_004",
     siteId: "site_001",
@@ -3468,8 +3468,8 @@ export const DEMO_PERMITS: Permit[] = [
     supervisorOnSite: "Craig Morrison",
     workType: "working_at_height",
     workDescription:
-      "Six-monthly LOLER thorough examination of ceiling track hoists in Bedrooms 3 and 5. Inspection of rails, carriages, motors and slings.",
-    locationOnSite: "Bedroom 3 En-suite, Room 5",
+      "Six-monthly LOLER thorough examination of ceiling track hoists in Rooms 3 and 5. Inspection of rails, carriages, motors and slings.",
+    locationOnSite: "Room 3 En-suite, Room 5",
     plannedStartDate: "2026-04-29",
     plannedEndDate: "2026-04-30",
     estimatedWorkers: 2,
@@ -3515,9 +3515,9 @@ export const DEMO_PERMITS: Permit[] = [
     ppeEyeProtection: false,
     ppeRespirator: false,
     emergencyProcedure:
-      "Notify site manager and ward sister before work begins. Follow hospice emergency procedure.",
-    nearestFirstAid: "Ward nursing station",
-    nearestFireExit: "End of each ward corridor",
+      "Notify site manager and site manager before work begins. Follow site facility emergency procedure.",
+    nearestFirstAid: "Main site reception",
+    nearestFireExit: "End of each main area corridor",
     assemblyPoint: "Front car park",
     attachments: [],
     status: "pending",
@@ -3537,8 +3537,8 @@ export const DEMO_PERMITS: Permit[] = [
     supervisorOnSite: "Stuart Wallace",
     workType: "general_maintenance",
     workDescription:
-      "Annual emergency lighting function test and monthly check — all self-contained fittings across the hospice.",
-    locationOnSite: "All areas — stairwells, corridors, wards",
+      "Annual emergency lighting function test and monthly check — all self-contained fittings across the site facility.",
+    locationOnSite: "All areas — stairwells, corridors, main areas",
     plannedStartDate: "2026-04-27",
     plannedEndDate: "2026-04-27",
     estimatedWorkers: 2,
@@ -3594,7 +3594,7 @@ export const DEMO_PERMITS: Permit[] = [
     reviewedAt: "2026-04-26T14:45:00Z",
     reviewedBy: "Michael Shuel",
     reviewedByUserId: "usr_002",
-    approvalNotes: "Confirmed. Wards notified.",
+    approvalNotes: "Confirmed. Mains notified.",
     declarationAgreed: true,
     declarationName: "Stuart Wallace",
     declarationDate: "2026-04-26",
@@ -3667,7 +3667,7 @@ export const DEMO_PERMITS: Permit[] = [
     reviewedBy: "Michael Kenny",
     reviewedByUserId: "usr_001",
     rejectionReason:
-      "Hot works in an occupied hospice environment require a full hot works permit, risk assessment, and method statement. Please resubmit with all documentation and a pre-agreed fire watch period.",
+      "Hot works in an occupied site facility environment require a full hot works permit, risk assessment, and method statement. Please resubmit with all documentation and a pre-agreed fire watch period.",
     declarationAgreed: true,
     declarationName: "Thomas Dunn",
     declarationDate: "2026-04-25",
@@ -3683,8 +3683,8 @@ export const DEMO_PERMITS: Permit[] = [
     supervisorOnSite: "Dave McAllister",
     workType: "electrical",
     workDescription:
-      "Annual PAT testing of all in-service electrical equipment across the Edinburgh Hospice — office areas, staff room, kitchen and ward common areas.",
-    locationOnSite: "Staff offices, Staff Room, Kitchen, Ward Common Rooms",
+      "Annual PAT testing of all in-service electrical equipment across the Edinburgh Technical Office — office areas, staff room, kitchen and main area common areas.",
+    locationOnSite: "Staff offices, Staff Room, Kitchen, Main Common Rooms",
     plannedStartDate: "2026-04-29",
     plannedEndDate: "2026-04-29",
     estimatedWorkers: 2,
@@ -3741,12 +3741,12 @@ export const DEMO_PERMITS: Permit[] = [
     reviewedBy: "Michael Shuel",
     reviewedByUserId: "usr_002",
     approvalNotes:
-      "Approved. Please coordinate with ward sister to avoid disruption during patient care rounds.",
+      "Approved. Please coordinate with site manager to avoid disruption during patient care rounds.",
     declarationAgreed: true,
     declarationName: "Dave McAllister",
     declarationDate: "2026-04-28",
   },
-  // --- Tomorrow (2026-04-30): approved permit, Glasgow Hospice ---
+  // --- Tomorrow (2026-04-30): approved permit, Glasgow Operations Centre ---
   {
     id: "pmt_009",
     siteId: "site_001",
@@ -3759,7 +3759,7 @@ export const DEMO_PERMITS: Permit[] = [
     workDescription:
       "Monthly Legionella control checks — sentinel outlet temperatures, calorifier temperature log, and flow rates across all hot and cold water sentinel points throughout the building.",
     locationOnSite:
-      "Plant Room, all floor bathrooms, kitchens, nursing station points",
+      "Plant Room, all floor bathrooms, kitchens, site reception points",
     plannedStartDate: "2026-04-30",
     plannedEndDate: "2026-04-30",
     estimatedWorkers: 1,
@@ -3832,8 +3832,8 @@ export const DEMO_PERMITS: Permit[] = [
     supervisorOnSite: "Angus Stewart",
     workType: "working_at_height",
     workDescription:
-      "Six-monthly LOLER thorough examination of ceiling track hoist in Bedroom 2 and mobile hoist in the physiotherapy room. Includes rail integrity checks, motor testing, and sling inspection.",
-    locationOnSite: "Bedroom 2, Physiotherapy Room",
+      "Six-monthly LOLER thorough examination of ceiling track hoist in Room 2 and mobile hoist in the workshop area. Includes rail integrity checks, motor testing, and sling inspection.",
+    locationOnSite: "Room 2, Workshop Area",
     plannedStartDate: "2026-04-30",
     plannedEndDate: "2026-04-30",
     estimatedWorkers: 2,
@@ -3879,9 +3879,9 @@ export const DEMO_PERMITS: Permit[] = [
     ppeEyeProtection: false,
     ppeRespirator: false,
     emergencyProcedure:
-      "Notify ward sister and site manager before commencing work. Follow hospice emergency evacuation procedure.",
+      "Notify site manager and site manager before commencing work. Follow site facility emergency evacuation procedure.",
     nearestFirstAid: "Nursing station",
-    nearestFireExit: "End of ward corridor",
+    nearestFireExit: "End of main area corridor",
     assemblyPoint: "South car park",
     attachments: [],
     status: "pending",
