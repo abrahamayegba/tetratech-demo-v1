@@ -384,7 +384,7 @@ export default function SitesPage() {
                     </p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  [
+                  {[
                     {
                       id: "primary-contact",
                       name: selectedSite.primaryContact,
