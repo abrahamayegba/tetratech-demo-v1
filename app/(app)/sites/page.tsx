@@ -289,10 +289,8 @@ export default function SitesPage() {
                     </span>
                   </div>
                   {(() => {
-                    const primary =
-                      site.contacts?.find((c) => c.isPrimary) ?? null;
-                    const name = primary?.name ?? site.primaryContact;
-                    const email = primary?.email ?? site.primaryContactEmail;
+                    const name = site.primaryContact;
+                    const email = site.primaryContactEmail;
                     return (
                       <>
                         <div className="flex items-center gap-1.5">
@@ -381,24 +379,21 @@ export default function SitesPage() {
               <div className="flex flex-col gap-2 border-t border-border/50 pt-4">
                 <div className="flex items-center gap-1.5 mb-1">
                   <Users className="w-3.5 h-3.5 text-muted-foreground" />
-                  <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                    Contacts ({(selectedSite.contacts ?? []).length || 1})
-                  </p>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                      Primary contact
+                    </p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  {(selectedSite.contacts && selectedSite.contacts.length > 0
-                    ? selectedSite.contacts
-                    : [
-                        {
-                          id: "legacy",
-                          name: selectedSite.primaryContact,
-                          email: selectedSite.primaryContactEmail,
-                          phone: selectedSite.primaryContactPhone,
-                          role: "Primary Contact",
-                          isPrimary: true,
-                        },
-                      ]
-                  ).map((contact) => (
+                  [
+                    {
+                      id: "primary-contact",
+                      name: selectedSite.primaryContact,
+                      email: selectedSite.primaryContactEmail,
+                      phone: selectedSite.primaryContactPhone,
+                      role: "Primary Contact",
+                      isPrimary: true,
+                    },
+                  ].map((contact) => (
                     <div
                       key={contact.id}
                       className={`flex items-start gap-3 rounded-lg border p-3 ${contact.isPrimary ? "border-amber-200 bg-amber-50/50" : "border-border bg-muted/20"}`}
