@@ -103,7 +103,7 @@ export interface AssetTest {
 
 // ─── Reactive Jobs (unplanned maintenance) ─────────────────────────────────────
 export type ReactiveJobStatus = "open" | "in-progress" | "completed" | "cancelled";
-export type ReactiveJobPriority = "low" | "medium" | "high" | "urgent";
+export type ReactiveJobPriority = "p1" | "p2" | "p3" | "p4" | "p5" | "p6";
 export type ReactiveJobSource = "portal" | "manual";
 
 export interface ReactiveJob {

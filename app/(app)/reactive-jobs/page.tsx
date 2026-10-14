@@ -98,19 +98,12 @@ const STATUS_CONFIG = {
 } as const;
 
 const PRIORITY_CONFIG = {
-  low: { label: "Low", badge: "bg-slate-100 text-slate-600 border-slate-200" },
-  medium: {
-    label: "Medium",
-    badge: "bg-amber-50 text-amber-700 border-amber-200",
-  },
-  high: {
-    label: "High",
-    badge: "bg-orange-50 text-orange-700 border-orange-200",
-  },
-  urgent: {
-    label: "Urgent",
-    badge: "bg-red-100 text-red-700 border-red-300 font-semibold",
-  },
+  p1: { label: "P1 — Emergency/Business Critical (Within 2 Hours)", badge: "bg-red-100 text-red-700 border-red-300 font-semibold" },
+  p2: { label: "P2 — Same Working Day", badge: "bg-orange-50 text-orange-700 border-orange-200" },
+  p3: { label: "P3 — 1 Day", badge: "bg-amber-50 text-amber-700 border-amber-200" },
+  p4: { label: "P4 — 3 Days", badge: "bg-slate-100 text-slate-600 border-slate-200" },
+  p5: { label: "P5 — 1 Week", badge: "bg-slate-100 text-slate-600 border-slate-200" },
+  p6: { label: "P6 — Next scheduled visit", badge: "bg-slate-100 text-slate-600 border-slate-200" },
 } as const;
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -343,10 +336,12 @@ export default function ReactiveJobsPage() {
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Priority</SelectItem>
-            <SelectItem value="low">Low</SelectItem>
-            <SelectItem value="medium">Medium</SelectItem>
-            <SelectItem value="high">High</SelectItem>
-            <SelectItem value="urgent">Urgent</SelectItem>
+  <SelectItem value="p1">P1 — Emergency/Business Critical (Within 2 Hours)</SelectItem>
+  <SelectItem value="p2">P2 — Same Working Day</SelectItem>
+  <SelectItem value="p3">P3 — 1 Day</SelectItem>
+  <SelectItem value="p4">P4 — 3 Days</SelectItem>
+  <SelectItem value="p5">P5 — 1 Week</SelectItem>
+  <SelectItem value="p6">P6 — Next scheduled visit</SelectItem>
           </SelectContent>
         </Select>
 
@@ -1073,7 +1068,7 @@ function ReactiveJobFormDialog({
     siteId: initialData?.siteId ?? "",
     title: initialData?.title ?? "",
     description: initialData?.description ?? "",
-    priority: initialData?.priority ?? "medium",
+    priority: initialData?.priority ?? "p3",
     status: initialData?.status ?? "open",
     source: initialData?.source ?? "manual",
     createdBy: initialData?.createdBy ?? user?.name ?? "",
@@ -1162,10 +1157,12 @@ function ReactiveJobFormDialog({
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="low">Low</SelectItem>
-                  <SelectItem value="medium">Medium</SelectItem>
-                  <SelectItem value="high">High</SelectItem>
-                  <SelectItem value="urgent">Urgent</SelectItem>
+  <SelectItem value="p1">P1 — Emergency/Business Critical (Within 2 Hours)</SelectItem>
+  <SelectItem value="p2">P2 — Same Working Day</SelectItem>
+  <SelectItem value="p3">P3 — 1 Day</SelectItem>
+  <SelectItem value="p4">P4 — 3 Days</SelectItem>
+  <SelectItem value="p5">P5 — 1 Week</SelectItem>
+  <SelectItem value="p6">P6 — Next scheduled visit</SelectItem>
                 </SelectContent>
               </Select>
             </div>
