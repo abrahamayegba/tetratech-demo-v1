@@ -67,6 +67,11 @@ const RESULT_CONFIG = {
     icon: XCircle,
     class: "border-red-200 text-red-700 bg-red-50",
   },
+  scheduled: {
+    label: "Scheduled",
+    icon: Clock,
+    class: "border-blue-200 text-blue-700 bg-blue-50",
+  },
   pending: {
     label: "Scheduled",
     icon: Clock,
