@@ -17,8 +17,8 @@ import type {
 export const DEMO_USERS: User[] = [
   {
     id: "usr_001",
-    name: "James Mitchell",
-    email: "james.mitchell@tetratech.co.uk",
+    name: "Lucy Simpson",
+    email: "lucy.simpson@tetratech.co.uk",
     passwordHash: "SecurePass123!",
     role: "admin",
     createdAt: "2024-01-10T09:00:00Z",
@@ -78,8 +78,8 @@ export const DEMO_SITES: Site[] = [
     city: "Belfast",
     postcode: "BT2 7BA",
     region: "R2 - Northern Ireland",
-    primaryContact: "James Mitchell",
-    primaryContactEmail: "james.mitchell@tetratech.co.uk",
+    primaryContact: "Lucy Simpson",
+    primaryContactEmail: "lucy.simpson@tetratech.co.uk",
     primaryContactPhone: "028 9012 4580",
     contacts: [
       {
@@ -120,8 +120,8 @@ export const DEMO_SITES: Site[] = [
     city: "Bristol",
     postcode: "BS1 4NH",
     region: "R3 - South West",
-    primaryContact: "Sarah Thompson",
-    primaryContactEmail: "sarah.thompson@tetratech.co.uk",
+    primaryContact: "Lucy Simpson",
+    primaryContactEmail: "lucy.simpson@tetratech.co.uk",
     primaryContactPhone: "0117 345 8210",
     contacts: [
       {
@@ -162,8 +162,8 @@ export const DEMO_SITES: Site[] = [
     city: "Cardiff",
     postcode: "CF10 1DY",
     region: "R4 - Wales",
-    primaryContact: "Emily Walker",
-    primaryContactEmail: "emily.walker@tetratech.co.uk",
+    primaryContact: "Lucy Simpson",
+    primaryContactEmail: "lucy.simpson@tetratech.co.uk",
     primaryContactPhone: "029 2045 6712",
     contacts: [
       {
@@ -204,8 +204,8 @@ export const DEMO_SITES: Site[] = [
     city: "Cardiff",
     postcode: "CF10 5DY",
     region: "R4 - Wales",
-    primaryContact: "Daniel Roberts",
-    primaryContactEmail: "daniel.roberts@tetratech.co.uk",
+    primaryContact: "Lucy Simpson",
+    primaryContactEmail: "lucy.simpson@tetratech.co.uk",
     primaryContactPhone: "029 2034 8125",
     contacts: [
       {
@@ -246,8 +246,8 @@ export const DEMO_SITES: Site[] = [
     city: "Chorley",
     postcode: "PR7 2SE",
     region: "R5 - North West",
-    primaryContact: "Thomas Wilson",
-    primaryContactEmail: "thomas.wilson@tetratech.co.uk",
+    primaryContact: "Lucy Simpson",
+    primaryContactEmail: "lucy.simpson@tetratech.co.uk",
     primaryContactPhone: "01257 451820",
     contacts: [
       {
@@ -288,8 +288,8 @@ export const DEMO_SITES: Site[] = [
     city: "Cockermouth",
     postcode: "CA13 9LQ",
     region: "R5 - North West",
-    primaryContact: "Sarah Thompson",
-    primaryContactEmail: "sarah.thompson@tetratech.co.uk",
+    primaryContact: "Lucy Simpson",
+    primaryContactEmail: "lucy.simpson@tetratech.co.uk",
     primaryContactPhone: "01900 821450",
     contacts: [
       {
@@ -330,8 +330,8 @@ export const DEMO_SITES: Site[] = [
     city: "Croydon",
     postcode: "CR0 1QB",
     region: "R6 - London & South East",
-    primaryContact: "Emily Walker",
-    primaryContactEmail: "emily.walker@tetratech.co.uk",
+    primaryContact: "Lucy Simpson",
+    primaryContactEmail: "lucy.simpson@tetratech.co.uk",
     primaryContactPhone: "020 8123 4570",
     contacts: [
       {
@@ -372,8 +372,8 @@ export const DEMO_SITES: Site[] = [
     city: "Edinburgh",
     postcode: "EH3 8BJ",
     region: "R1 - Scotland",
-    primaryContact: "James Mitchell",
-    primaryContactEmail: "james.mitchell@tetratech.co.uk",
+    primaryContact: "Lucy Simpson",
+    primaryContactEmail: "lucy.simpson@tetratech.co.uk",
     primaryContactPhone: "0131 555 6210",
     contacts: [
       {
@@ -414,8 +414,8 @@ export const DEMO_SITES: Site[] = [
     city: "Leeds",
     postcode: "LS1 4DL",
     region: "R7 - Yorkshire",
-    primaryContact: "Daniel Roberts",
-    primaryContactEmail: "daniel.roberts@tetratech.co.uk",
+    primaryContact: "Lucy Simpson",
+    primaryContactEmail: "lucy.simpson@tetratech.co.uk",
     primaryContactPhone: "0113 421 7830",
     contacts: [
       {
@@ -456,8 +456,8 @@ export const DEMO_SITES: Site[] = [
     city: "Leeds",
     postcode: "LS1 5AB",
     region: "R7 - Yorkshire",
-    primaryContact: "Thomas Wilson",
-    primaryContactEmail: "thomas.wilson@tetratech.co.uk",
+    primaryContact: "Lucy Simpson",
+    primaryContactEmail: "lucy.simpson@tetratech.co.uk",
     primaryContactPhone: "0113 452 6190",
     contacts: [
       {
@@ -498,8 +498,8 @@ export const DEMO_SITES: Site[] = [
     city: "Leicester",
     postcode: "LE1 6TE",
     region: "R8 - Midlands",
-    primaryContact: "Sarah Thompson",
-    primaryContactEmail: "sarah.thompson@tetratech.co.uk",
+    primaryContact: "Lucy Simpson",
+    primaryContactEmail: "lucy.simpson@tetratech.co.uk",
     primaryContactPhone: "0116 312 5470",
     contacts: [
       {
@@ -540,8 +540,8 @@ export const DEMO_SITES: Site[] = [
     city: "Liverpool",
     postcode: "L3 9JQ",
     region: "R5 - North West",
-    primaryContact: "Emily Walker",
-    primaryContactEmail: "emily.walker@tetratech.co.uk",
+    primaryContact: "Lucy Simpson",
+    primaryContactEmail: "lucy.simpson@tetratech.co.uk",
     primaryContactPhone: "0151 421 6830",
     contacts: [
       {
@@ -582,8 +582,8 @@ export const DEMO_SITES: Site[] = [
     city: "London",
     postcode: "EC3M 4BY",
     region: "R6 - London & South East",
-    primaryContact: "James Mitchell",
-    primaryContactEmail: "james.mitchell@tetratech.co.uk",
+    primaryContact: "Lucy Simpson",
+    primaryContactEmail: "lucy.simpson@tetratech.co.uk",
     primaryContactPhone: "020 7946 8210",
     contacts: [
       {
@@ -624,8 +624,8 @@ export const DEMO_SITES: Site[] = [
     city: "Manchester",
     postcode: "M1 3HP",
     region: "R5 - North West",
-    primaryContact: "Daniel Roberts",
-    primaryContactEmail: "daniel.roberts@tetratech.co.uk",
+    primaryContact: "Lucy Simpson",
+    primaryContactEmail: "lucy.simpson@tetratech.co.uk",
     primaryContactPhone: "0161 452 7190",
     contacts: [
       {
@@ -666,8 +666,8 @@ export const DEMO_SITES: Site[] = [
     city: "Southampton",
     postcode: "SO14 7DX",
     region: "R6 - London & South East",
-    primaryContact: "Thomas Wilson",
-    primaryContactEmail: "thomas.wilson@tetratech.co.uk",
+    primaryContact: "Lucy Simpson",
+    primaryContactEmail: "lucy.simpson@tetratech.co.uk",
     primaryContactPhone: "023 8055 6210",
     contacts: [
       {
@@ -708,8 +708,8 @@ export const DEMO_SITES: Site[] = [
     city: "Wexford",
     postcode: "Y35 XN29",
     region: "R9 - Ireland",
-    primaryContact: "Sarah Thompson",
-    primaryContactEmail: "sarah.thompson@tetratech.co.uk",
+    primaryContact: "Lucy Simpson",
+    primaryContactEmail: "lucy.simpson@tetratech.co.uk",
     primaryContactPhone: "053 912 4580",
     contacts: [
       {
@@ -3539,8 +3539,8 @@ export const DEMO_PERMITS: Permit[] = [
     workDescription:
       "Annual emergency lighting function test and monthly check — all self-contained fittings across the site facility.",
     locationOnSite: "All areas — stairwells, corridors, main areas",
-    plannedStartDate: "2026-04-27",
-    plannedEndDate: "2026-04-27",
+    plannedStartDate: "2026-04-30",
+    plannedEndDate: "2026-04-30",
     estimatedWorkers: 2,
     hasRiskAssessment: true,
     hasMethodStatement: false,
@@ -3612,8 +3612,8 @@ export const DEMO_PERMITS: Permit[] = [
     workDescription:
       "Replacement of old copper pipework in plant room using soldering torch. Estimated 4–5 hours.",
     locationOnSite: "Plant Room",
-    plannedStartDate: "2026-04-28",
-    plannedEndDate: "2026-04-28",
+    plannedStartDate: "2026-04-30",
+    plannedEndDate: "2026-04-30",
     estimatedWorkers: 2,
     hasRiskAssessment: false,
     hasMethodStatement: false,
