@@ -41,7 +41,19 @@ export function getOctoberAssetTests(instances: AssetInstance[]): AssetTest[] {
             : result === "scheduled"
               ? "October compliance inspection scheduled."
               : "No October test recorded.",
-      attachments: [],
+      attachments:
+        index < 5
+          ? [
+              {
+                id: `att-oct-${String(index + 1).padStart(3, "0")}`,
+                name: `October completed job sheet - ${instance.serialNumber}.pdf`,
+                type: "application/pdf",
+                size: 48200 + index * 1750,
+                dataUrl: `data:application/pdf;charset=utf-8,${encodeURIComponent(`Tetra Tech\nOctober Asset Test Job Sheet\nAsset: ${instance.serialNumber}\nResult: ${result.toUpperCase()}\nCompleted: 14 October 2026`)}`,
+                uploadedAt: "2026-10-14T16:30:00Z",
+              },
+            ]
+          : [],
       ...(result === "pass" || result === "fail" ? { certificateNumber: `CERT-OCT-${String(index + 1).padStart(3, "0")}` } : {}),
       nextTestDate: "2027-10-14",
       createdAt: "2026-10-14T00:00:00Z",
