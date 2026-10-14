@@ -17,6 +17,7 @@ import {
   Layers,
   Package,
   ClipboardList,
+  ClipboardCheck,
   ExternalLink,
   Zap,
   ChevronDown,
@@ -65,6 +66,7 @@ const JOBS_SUB_NAV: NavItem[] = [
 ];
 
 const BOTTOM_NAV: NavItem[] = [
+  { label: "Scorecard", href: "/scorecard", icon: ClipboardCheck },
   { label: "Permits to Work", href: "/permits", icon: ShieldCheck },
   { label: "Reports", href: "/reports", icon: BarChart3 },
   { label: "Notifications", href: "/notifications", icon: Bell },

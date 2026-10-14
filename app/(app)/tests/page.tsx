@@ -81,6 +81,12 @@ const RESULT_CONFIG = {
     badge: "border-red-200 text-red-700 bg-red-50",
     dot: "bg-red-500",
   },
+  scheduled: {
+    label: "Scheduled",
+    icon: Clock,
+    badge: "border-blue-200 text-blue-700 bg-blue-50",
+    dot: "bg-blue-500",
+  },
   pending: {
     label: "No Test",
     icon: Clock,
@@ -233,15 +239,16 @@ export default function TestsPage() {
           <SelectContent>
             <SelectItem value="all">All Results</SelectItem>
             <SelectItem value="pass">Pass</SelectItem>
-            <SelectItem value="fail">Fail</SelectItem>
-            <SelectItem value="pending">No Test</SelectItem>
+  <SelectItem value="fail">Fail</SelectItem>
+  <SelectItem value="scheduled">Scheduled</SelectItem>
+  <SelectItem value="pending">No Test</SelectItem>
           </SelectContent>
         </Select>
       </div>
 
       {/* Summary strip */}
-      <div className="grid grid-cols-3 gap-3">
-        {(["pass", "fail", "pending"] as const).map((r) => {
+  <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+  {(["pass", "scheduled", "fail", "pending"] as const).map((r) => {
           const count = filtered.filter((t) => t.result === r).length;
           const rc = RESULT_CONFIG[r];
           const Icon = rc.icon;
@@ -891,7 +898,7 @@ function TestFormDialog({
           <div className="flex flex-col gap-2">
             <Label>Result *</Label>
             <div className="flex gap-2">
-              {(["pass", "fail", "pending"] as const).map((r) => {
+              {(["pass", "scheduled", "fail", "pending"] as const).map((r) => {
                 const rc = RESULT_CONFIG[r];
                 const Icon = rc.icon;
                 return (

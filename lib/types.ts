@@ -68,13 +68,13 @@ export interface AssetInstance {
   installDate: string;
   nextTestDue: string;
   lastTestDate?: string;
-  lastTestResult?: "pass" | "fail" | "pending";
+  lastTestResult?: "pass" | "fail" | "pending" | "scheduled";
   notes?: string;
   createdAt: string;
 }
 
 // ─── Asset Tests ──────────────────────────────────────────────────────────────
-export type TestResult = "pass" | "fail" | "pending";
+export type TestResult = "pass" | "fail" | "pending" | "scheduled";
 
 export interface Attachment {
   id: string;

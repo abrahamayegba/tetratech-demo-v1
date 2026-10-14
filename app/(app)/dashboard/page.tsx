@@ -63,13 +63,6 @@ const RED = "#dc2626";
 const BLUE = "#2563eb";
 const AMBER = "#d97706";
 
-function getOctoberStatus(index: number) {
-  if (index < 3) return "noTest" as const;
-  if (index < 10) return "scheduled" as const;
-  if (index % 7 === 0) return "fail" as const;
-  return "pass" as const;
-}
-
 export default function DashboardPage() {
   const { user } = useAuth();
   const router = useRouter();

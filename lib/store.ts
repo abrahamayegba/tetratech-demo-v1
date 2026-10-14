@@ -15,6 +15,7 @@ import type {
   Permit,
   PermitAttachment,
 } from "./types";
+import { getOctoberAssetInstances, getOctoberAssetTests } from "./october-asset-status";
 import {
   DEMO_USERS,
   DEMO_SITES,
@@ -46,7 +47,7 @@ const KEYS = {
   SEEDED: "es_seeded",
 };
 
-const SEED_VERSION = "v12"; // bump this to reseed all demo data
+const SEED_VERSION = "v15"; // bump this to reseed all demo data
 
 // ─── Seed ─────────────────────────────────────────────────────────────────────
 export function seedIfNeeded(): void {
@@ -57,17 +58,9 @@ export function seedIfNeeded(): void {
   localStorage.setItem(KEYS.USERS, JSON.stringify(DEMO_USERS));
   localStorage.setItem(KEYS.SITES, JSON.stringify(DEMO_SITES));
   localStorage.setItem(KEYS.ASSET_TYPES, JSON.stringify(DEMO_ASSET_TYPES));
-  localStorage.setItem(
-    KEYS.ASSET_INSTANCES,
-    JSON.stringify(
-      DEMO_ASSET_INSTANCES.map((asset, index) => ({
-        ...asset,
-        // Keep the demo's live inventory actionable without showing stale overdue dates.
-        nextTestDue: `2026-11-${String(Math.min(index + 1, 28)).padStart(2, "0")}`,
-      })),
-    ),
-  );
-  localStorage.setItem(KEYS.ASSET_TESTS, JSON.stringify(DEMO_ASSET_TESTS));
+  const octoberInstances = getOctoberAssetInstances(DEMO_ASSET_INSTANCES);
+  localStorage.setItem(KEYS.ASSET_INSTANCES, JSON.stringify(octoberInstances));
+  localStorage.setItem(KEYS.ASSET_TESTS, JSON.stringify(getOctoberAssetTests(octoberInstances)));
   localStorage.setItem(KEYS.NOTIFICATIONS, JSON.stringify(DEMO_NOTIFICATIONS));
   localStorage.setItem(KEYS.REACTIVE_JOBS, JSON.stringify(DEMO_REACTIVE_JOBS));
   localStorage.setItem(KEYS.PLANNED_JOBS, JSON.stringify(DEMO_PLANNED_JOBS));
