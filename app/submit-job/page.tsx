@@ -39,7 +39,7 @@ export default function SubmitJobPage() {
   const [siteId, setSiteId] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [priority, setPriority] = useState("medium");
+  const [priority, setPriority] = useState("p3");
 
   useEffect(() => {
     seedIfNeeded();
@@ -239,18 +239,12 @@ export default function SubmitJobPage() {
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="low">
-                          Low — not urgent, can wait
-                        </SelectItem>
-                        <SelectItem value="medium">
-                          Medium — needs attention soon
-                        </SelectItem>
-                        <SelectItem value="high">
-                          High — significant issue
-                        </SelectItem>
-                        <SelectItem value="urgent">
-                          Urgent — immediate safety risk
-                        </SelectItem>
+  <SelectItem value="p1">P1 — Emergency/Business Critical (Within 2 Hours)</SelectItem>
+  <SelectItem value="p2">P2 — Same Working Day</SelectItem>
+  <SelectItem value="p3">P3 — 1 Day</SelectItem>
+  <SelectItem value="p4">P4 — 3 Days</SelectItem>
+  <SelectItem value="p5">P5 — 1 Week</SelectItem>
+  <SelectItem value="p6">P6 — Next scheduled visit</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>

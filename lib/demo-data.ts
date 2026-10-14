@@ -1273,7 +1273,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_001",
     assetInstanceId: "ai_001",
-    testedBy: "Caledonian Fire & Safety Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_001",
     testDate: "2026-09-05",
     result: "pass",
@@ -1298,7 +1298,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_002",
     assetInstanceId: "ai_001",
-    testedBy: "Caledonian Fire & Safety Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_002",
     testDate: "2026-09-06",
     result: "pass",
@@ -1324,7 +1324,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_003",
     assetInstanceId: "ai_002",
-    testedBy: "Caledonian Fire & Safety Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_001",
     testDate: "2026-09-05",
     result: "pass",
@@ -1350,7 +1350,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_004",
     assetInstanceId: "ai_003",
-    testedBy: "Secure Systems Scotland Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_002",
     testDate: "2026-09-07",
     result: "pass",
@@ -1376,7 +1376,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_005",
     assetInstanceId: "ai_004",
-    testedBy: "Highlands Lifting & LOLER Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_001",
     testDate: "2026-09-08",
     result: "fail",
@@ -1407,7 +1407,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_006",
     assetInstanceId: "ai_005",
-    testedBy: "Highlands Lifting & LOLER Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_002",
     testDate: "2026-09-09",
     result: "pass",
@@ -1433,7 +1433,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_007",
     assetInstanceId: "ai_006",
-    testedBy: "AquaSafe Compliance Ltd",
+    testedBy: "Virtual Water Services",
     testedByUserId: "usr_002",
     testDate: "2026-09-10",
     result: "pass",
@@ -1459,7 +1459,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_008",
     assetInstanceId: "ai_008",
-    testedBy: "Caledonian Fire & Safety Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_001",
     testDate: "2026-09-11",
     result: "fail",
@@ -1489,7 +1489,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_009",
     assetInstanceId: "ai_009",
-    testedBy: "Spark Electrical Testing Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_002",
     testDate: "2026-09-12",
     result: "pass",
@@ -1540,7 +1540,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_011",
     assetInstanceId: "ai_013",
-    testedBy: "Secure Systems Scotland Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_001",
     testDate: "2026-09-14",
     result: "fail",
@@ -1570,7 +1570,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_012",
     assetInstanceId: "ai_014",
-    testedBy: "Highlands Lifting & LOLER Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_002",
     testDate: "2026-09-24",
     result: "pass",
@@ -1597,7 +1597,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_013",
     assetInstanceId: "ai_021",
-    testedBy: "Caledonian Fire & Safety Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_002",
     testDate: "2026-09-01",
     result: "pass",
@@ -1624,7 +1624,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_014",
     assetInstanceId: "ai_027",
-    testedBy: "Highlands Lifting & LOLER Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_001",
     testDate: "2026-09-13",
     result: "pass",
@@ -1654,7 +1654,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_015",
     assetInstanceId: "ai_032",
-    testedBy: "Spark Electrical Testing Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_002",
     testDate: "2026-09-16",
     result: "fail",
@@ -1684,7 +1684,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_016",
     assetInstanceId: "ai_007",
-    testedBy: "Caledonian Fire & Safety Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_001",
     testDate: "2026-09-11",
     result: "pass",
@@ -1708,7 +1708,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_017",
     assetInstanceId: "ai_019",
-    testedBy: "National Gate Services Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_001",
     testDate: "2026-09-13",
     result: "pass",
@@ -1733,7 +1733,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_018",
     assetInstanceId: "ai_024",
-    testedBy: "National Gate Services Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_002",
     testDate: "2026-09-17",
     result: "pass",
@@ -1757,7 +1757,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_019",
     assetInstanceId: "ai_028",
-    testedBy: "Caledonian Fire & Safety Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_002",
     testDate: "2026-09-18",
     result: "pass",
@@ -1807,7 +1807,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_021",
     assetInstanceId: "ai_012",
-    testedBy: "Caledonian Fire & Safety Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_001",
     testDate: "2026-09-14",
     result: "pass",
@@ -1830,7 +1830,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_022",
     assetInstanceId: "ai_017",
-    testedBy: "Caledonian Fire & Safety Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_002",
     testDate: "2026-09-19",
     result: "pass",
@@ -1853,7 +1853,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_023",
     assetInstanceId: "ai_025",
-    testedBy: "Caledonian Fire & Safety Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_001",
     testDate: "2026-09-20",
     result: "pass",
@@ -1876,7 +1876,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_024",
     assetInstanceId: "ai_022",
-    testedBy: "Highlands Lifting & LOLER Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_002",
     testDate: "2026-09-21",
     result: "pass",
@@ -1899,7 +1899,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_025",
     assetInstanceId: "ai_031",
-    testedBy: "Caledonian Fire & Safety Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_001",
     testDate: "2026-09-13",
     result: "pass",
@@ -1922,7 +1922,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_026",
     assetInstanceId: "ai_018",
-    testedBy: "Spark Electrical Testing Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_002",
     testDate: "2026-09-22",
     result: "pass",
@@ -1945,7 +1945,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_027",
     assetInstanceId: "ai_016",
-    testedBy: "AquaSafe Compliance Ltd",
+    testedBy: "Virtual Water Services",
     testedByUserId: "usr_001",
     testDate: "2026-09-10",
     result: "pass",
@@ -1968,7 +1968,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_028",
     assetInstanceId: "ai_011",
-    testedBy: "Spark Electrical Testing Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_002",
     testDate: "2026-09-23",
     result: "pass",
@@ -1991,7 +1991,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_029",
     assetInstanceId: "ai_015",
-    testedBy: "Highlands Lifting & LOLER Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_001",
     testDate: "2026-09-24",
     result: "pass",
@@ -2014,7 +2014,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_030",
     assetInstanceId: "ai_026",
-    testedBy: "Caledonian Fire & Safety Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_002",
     testDate: "2026-09-20",
     result: "pass",
@@ -2037,7 +2037,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_031",
     assetInstanceId: "ai_029",
-    testedBy: "Caledonian Fire & Safety Ltd",
+    testedBy: "Virtual Facility Services",
     testedByUserId: "usr_001",
     testDate: "2026-09-25",
     result: "pass",
@@ -2061,7 +2061,7 @@ export const DEMO_ASSET_TESTS: AssetTest[] = [
   {
     id: "tst_032",
     assetInstanceId: "ai_020",
-    testedBy: "AquaSafe Compliance Ltd",
+    testedBy: "Virtual Water Services",
     testedByUserId: "usr_002",
     testDate: "2026-09-26",
     result: "pass",
@@ -2328,9 +2328,9 @@ export const DEMO_NOTIFICATIONS: Notification[] = [
   {
     id: "ntf_013",
     type: "supplier_insurance_expired",
-    title: "Supplier Insurance Expired: Highlands Lifting & LOLER Ltd",
+    title: "Supplier Insurance Expired: Virtual Facility Services",
     message:
-      "The public liability insurance for Highlands Lifting & LOLER Ltd expired on 28 Feb 2026. You cannot assign new reactive jobs to this supplier until their insurance is renewed. Please contact them to obtain updated documentation.",
+      "The public liability insurance for Virtual Facility Services expired on 28 Feb 2026. You cannot assign new reactive jobs to this supplier until their insurance is renewed. Please contact them to obtain updated documentation.",
     read: false,
     createdAt: "2026-03-01T08:00:00Z",
     linkTo: "/supply-chain",
@@ -2346,7 +2346,7 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     title: "Broken Window in Corridor",
     description:
       "Ground floor corridor window is cracked and needs replacement. Health and safety concern.",
-    priority: "high",
+    priority: "p2",
     status: "open",
     source: "portal",
     createdBy: "Anne Stewart",
@@ -2354,7 +2354,7 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     contactName: "Anne Stewart",
     contactPhone: "0141 445 2200",
     contactEmail: "a.stewart@tetratech.co.uk",
-    assignedTo: "ScotFix Building Services",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_001",
     notes:
       "Window is on south-facing wall. May need scaffolding for external access.",
@@ -2369,7 +2369,7 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     title: "Electrical Socket Repair",
     description:
       "Double socket outlet in dining area not working. Sparking observed. Urgent safety issue.",
-    priority: "urgent",
+    priority: "p1",
     status: "in-progress",
     source: "portal",
     createdBy: "Tom Henderson",
@@ -2377,7 +2377,7 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     contactName: "Tom Henderson",
     contactPhone: "0141 339 8800",
     contactEmail: "t.henderson@tetratech.co.uk",
-    assignedTo: "Spark Electrical Testing Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_004",
     notes:
       "Electrician to inspect. May need to isolate the circuit until repaired.",
@@ -2392,12 +2392,12 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     title: "Door Handle Replacement",
     description:
       "Staff room door handle is broken. Difficult to open from outside.",
-    priority: "low",
+    priority: "p6",
     status: "open",
     source: "manual",
     createdBy: "Stuart Mcmillan",
     createdByUserId: "usr_002",
-    assignedTo: "ScotFix Building Services",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_001",
     notes:
       "Standard replacement handle. Can be ordered from facilities supplier.",
@@ -2412,7 +2412,7 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     title: "Plumbing Leak in Basement",
     description:
       "Water leak detected below ground floor. Appears to be from waste pipe.",
-    priority: "high",
+    priority: "p2",
     status: "in-progress",
     source: "portal",
     createdBy: "Elaine Park",
@@ -2420,7 +2420,7 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     contactName: "Elaine Park",
     contactPhone: "0141 339 8801",
     contactEmail: "e.park@tetratech.co.uk",
-    assignedTo: "AquaSafe Compliance Ltd",
+    assignedTo: "Virtual Water Services",
     assignedCompanyId: "sc_005",
     notes:
       "Plumber called. Temporary catch bucket in place to prevent water damage.",
@@ -2435,7 +2435,7 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     title: "Heating System Maintenance",
     description:
       "Boiler making unusual noise. Heating in west wing is inconsistent.",
-    priority: "medium",
+    priority: "p3",
     status: "completed",
     source: "portal",
     createdBy: "Linda Fraser",
@@ -2443,7 +2443,7 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     contactName: "Linda Fraser",
     contactPhone: "01382 826 600",
     contactEmail: "l.fraser@tetratech.co.uk",
-    assignedTo: "AquaSafe Compliance Ltd",
+    assignedTo: "Virtual Water Services",
     assignedCompanyId: "sc_005",
     notes:
       "Engineer serviced boiler. Scale buildup removed. System now running smoothly.",
@@ -2459,12 +2459,12 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     title: "Light Bulb Replacement",
     description:
       "Fluorescent lighting in meeting room section is flickering. Multiple bulbs failing.",
-    priority: "low",
+    priority: "p6",
     status: "open",
     source: "manual",
     createdBy: "Rachel Doyle",
     createdByUserId: "usr_001",
-    assignedTo: "Spark Electrical Testing Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_004",
     notes: "Bulk order of replacement T8 tubes needed.",
     attachments: [],
@@ -2478,7 +2478,7 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     title: "Ceiling Tile Fallen in Main Corridor",
     description:
       "A ceiling tile has fallen in the main corridor near the collaboration area. Area has been cordoned off. Needs inspection and replacement.",
-    priority: "high",
+    priority: "p2",
     status: "open",
     source: "portal",
     createdBy: "Malcolm Ross",
@@ -2486,7 +2486,7 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     contactName: "Malcolm Ross",
     contactPhone: "07823 851279",
     contactEmail: "malcolm.ross@tetratech.co.uk",
-    assignedTo: "ScotFix Building Services",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_001",
     notes:
       "Section taped off. Replacement tile ordered — same spec as existing (600x600 mineral fibre).",
@@ -2501,7 +2501,7 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     title: "Hot Water No Pressure — First Floor Bathrooms",
     description:
       "Staff on first floor reporting very low hot water pressure in the main bathrooms. Cold supply appears fine. Booster pump may be faulty.",
-    priority: "urgent",
+    priority: "p1",
     status: "in-progress",
     source: "portal",
     createdBy: "Craig Healy",
@@ -2509,7 +2509,7 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     contactName: "Craig Healy",
     contactPhone: "07515 134870",
     contactEmail: "craig.healy@tetratech.co.uk",
-    assignedTo: "AquaSafe Compliance Ltd",
+    assignedTo: "Virtual Water Services",
     assignedCompanyId: "sc_005",
     notes:
       "Plumber on site. Booster pump being inspected now. Possible impeller wear.",
@@ -2524,12 +2524,12 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     title: "External Door Handle Broken — Staff Entrance",
     description:
       "The external handle on the staff side entrance is broken — the mechanism does not retract properly when turning. Staff are having to use a different entrance.",
-    priority: "medium",
+    priority: "p3",
     status: "open",
     source: "manual",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
-    assignedTo: "ScotFix Building Services",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_001",
     notes:
       "Heavy-duty lever handle required — check spec from last replacement in 2023.",
@@ -2544,7 +2544,7 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     title: "Smoke Detector Fault Light — Meeting Room",
     description:
       "Smoke detector in the meeting room is showing a fault light. Device is 4 years old. Needs inspection and possible replacement.",
-    priority: "high",
+    priority: "p2",
     status: "open",
     source: "portal",
     createdBy: "Michael Shuel",
@@ -2552,7 +2552,7 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     contactName: "Michael Shuel",
     contactPhone: "07368 599031",
     contactEmail: "michael.shuel@tetratech.co.uk",
-    assignedTo: "Secure Systems Scotland Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_006",
     notes:
       "Fault light is amber — likely sensor contamination. Engineer to attend and clear or replace.",
@@ -2577,13 +2577,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Annual Fire Extinguisher Service",
     description:
       "Full annual service and inspection of all water stored pressure fire extinguishers across the building in line with SFG20 23-13.",
-    priority: "high",
+    priority: "p2",
     status: "scheduled",
     frequency: "annual",
     scheduledDate: "2026-10-08",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
-    assignedTo: "Caledonian Fire & Safety Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_002",
     notes:
       "All 12 extinguishers to be checked. Tags to be updated post-service.",
@@ -2597,13 +2597,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "6-Monthly LOLER Goods Lift Inspection",
     description:
       "Thorough examination of the goods lift and workshop lifting equipment in compliance with LOLER regulations.",
-    priority: "high",
+    priority: "p2",
     status: "scheduled",
     frequency: "biannual",
     scheduledDate: "2026-10-15",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
-    assignedTo: "Highlands Lifting & LOLER Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_003",
     notes:
       "Engineer must sign LOLER certificate on site. Copy to be retained on file.",
@@ -2617,13 +2617,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Fire Alarm System 6-Month Inspection",
     description:
       "Bi-annual inspection and test of the Category L1 fire alarm installation per SFG20 22-09.",
-    priority: "high",
+    priority: "p2",
     status: "scheduled",
     frequency: "biannual",
     scheduledDate: "2026-10-22",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
-    assignedTo: "Secure Systems Scotland Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_006",
     notes:
       "Night staff to be informed of planned alarm test. Avoid 08:00–09:00 window.",
@@ -2637,13 +2637,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Monthly Legionella Temperature Checks",
     description:
       "Monthly sentinel outlet and calorifier temperature monitoring checks per SFG20 32-05 and SFG20 32-02 for water hygiene control.",
-    priority: "medium",
+    priority: "p3",
     status: "scheduled",
     frequency: "monthly",
     scheduledDate: "2026-10-05",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
-    assignedTo: "AquaSafe Compliance Ltd",
+    assignedTo: "Virtual Water Services",
     assignedCompanyId: "sc_005",
     notes:
       "Results to be logged in Legionella log book. Report any readings outside 50–60°C range.",
@@ -2657,13 +2657,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "PAT Testing — Office Equipment",
     description:
       "Annual portable appliance testing of all in-service electrical equipment in staff offices and common areas per SFG20 42-01.",
-    priority: "medium",
+    priority: "p3",
     status: "scheduled",
     frequency: "annual",
     scheduledDate: "2026-10-20",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
-    assignedTo: "Spark Electrical Testing Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_004",
     notes:
       "Estimated 60+ items. Arrange out-of-hours access with site manager.",
@@ -2677,13 +2677,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Monthly Water Temperature Checks",
     description:
       "Monthly sentinel outlet and calorifier temperature monitoring checks per SFG20 32-05 and 32-02 — Glasgow Operations Centre.",
-    priority: "medium",
+    priority: "p3",
     status: "in-progress",
     frequency: "monthly",
     scheduledDate: "2026-10-08",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
-    assignedTo: "AquaSafe Compliance Ltd",
+    assignedTo: "Virtual Water Services",
     assignedCompanyId: "sc_005",
     notes:
       "Engineer on site from 09:00. Log all readings in Legionella logbook.",
@@ -2697,13 +2697,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "PAT Testing — Edinburgh Technical Office",
     description:
       "Annual portable appliance testing of all in-service electrical equipment across the Edinburgh office per SFG20 42-01.",
-    priority: "medium",
+    priority: "p3",
     status: "in-progress",
     frequency: "annual",
     scheduledDate: "2026-10-08",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
-    assignedTo: "Spark Electrical Testing Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_004",
     notes:
       "Estimated 65 items. Two engineers on site. Staff rooms accessed from 08:30.",
@@ -2717,13 +2717,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Monthly Water Hygiene Checks — Glasgow Office",
     description:
       "Monthly water hygiene temperature monitoring at all sentinel outlets — Glasgow office.",
-    priority: "medium",
+    priority: "p3",
     status: "scheduled",
     frequency: "monthly",
     scheduledDate: "2026-10-09",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
-    assignedTo: "AquaSafe Compliance Ltd",
+    assignedTo: "Virtual Water Services",
     assignedCompanyId: "sc_005",
     notes: "Access to plant room and all floor bathrooms required.",
     attachments: [],
@@ -2736,13 +2736,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "6-Month LOLER Inspection — Edinburgh Hoists",
     description:
       "Six-monthly thorough examination of the goods lift and mobile lifting equipment in the workshop per LOLER regulations.",
-    priority: "high",
+    priority: "p2",
     status: "scheduled",
     frequency: "biannual",
     scheduledDate: "2026-10-09",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
-    assignedTo: "Highlands Lifting & LOLER Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_003",
     notes:
       "LOLER certificates to be signed on site. Facilities team to be notified prior.",
@@ -2756,13 +2756,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Emergency Lighting Monthly Test",
     description:
       "Monthly function test of all self-contained emergency lighting fittings per SFG20 37-01.",
-    priority: "medium",
+    priority: "p3",
     status: "in-progress",
     frequency: "monthly",
     scheduledDate: "2026-10-09",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
-    assignedTo: "Caledonian Fire & Safety Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_002",
     notes:
       "Record lamp pass/fail status for each fitting. Replace any failed units immediately.",
@@ -2776,13 +2776,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Automated Gate — 6-Month Safety Inspection",
     description:
       "Safety inspection and maintenance of automated sliding yard gates per SFG20 72-01.",
-    priority: "low",
+    priority: "p6",
     status: "scheduled",
     frequency: "biannual",
     scheduledDate: "2026-10-18",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
-    assignedTo: "National Gate Services Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_007",
     notes:
       "Force test and safety edge checks required. Gate to be offline for approx 2 hours.",
@@ -2796,13 +2796,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Distribution Board Inspection",
     description:
       "Annual inspection and testing of all distribution boards per SFG20 44-07.",
-    priority: "high",
+    priority: "p2",
     status: "scheduled",
     frequency: "annual",
     scheduledDate: "2026-10-24",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
-    assignedTo: "Spark Electrical Testing Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_004",
     notes:
       "Partial isolation required. Coordinate with site manager to minimise site operations disruption.",
@@ -2816,13 +2816,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Monthly Legionella Temperature Checks",
     description:
       "Monthly sentinel outlet and calorifier temperature monitoring checks for Edinburgh Technical Office.",
-    priority: "medium",
+    priority: "p3",
     status: "scheduled",
     frequency: "monthly",
     scheduledDate: "2026-10-07",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
-    assignedTo: "AquaSafe Compliance Ltd",
+    assignedTo: "Virtual Water Services",
     assignedCompanyId: "sc_005",
     notes: "Access required to utility room and both floor bathrooms.",
     attachments: [],
@@ -2835,13 +2835,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Annual Fire Door Inspection",
     description:
       "Annual inspection and maintenance of all fire doors in compliance with SFG20 23-17.",
-    priority: "high",
+    priority: "p2",
     status: "completed",
     frequency: "annual",
     scheduledDate: "2026-10-03",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
-    assignedTo: "Caledonian Fire & Safety Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_002",
     notes:
       "All 18 fire doors inspected. 2 door closers replaced. Report filed.",
@@ -2856,13 +2856,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Emergency Assistance Alarm Monthly Check",
     description:
       "Monthly inspection and test of emergency assistance alarm system per SFG20 14-20. All zones to be tested including en-suite pull cords.",
-    priority: "medium",
+    priority: "p3",
     status: "scheduled",
     frequency: "monthly",
     scheduledDate: "2026-10-09",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
-    assignedTo: "Caledonian Fire & Safety Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_002",
     notes: "Main staff to be notified before any alarm activation.",
     attachments: [],
@@ -2875,13 +2875,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "TMV Service & Inspection — Edinburgh",
     description:
       "Annual thermostatic mixing valve (Type 2) inspection, cleaning and setting check across all patient en-suites per SFG20 61-22.",
-    priority: "high",
+    priority: "p2",
     status: "scheduled",
     frequency: "annual",
     scheduledDate: "2026-10-10",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
-    assignedTo: "AquaSafe Compliance Ltd",
+    assignedTo: "Virtual Water Services",
     assignedCompanyId: "sc_005",
     notes:
       "All 8 TMVs to be stripped, descaled and reset. Isolation required per en-suite.",
@@ -2895,7 +2895,7 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Monthly Fire Alarm Weekly Test",
     description:
       "Weekly activation test of fire alarm call points — manually test one call point per week rotating around the building per SFG20 22-09.",
-    priority: "medium",
+    priority: "p3",
     status: "scheduled",
     frequency: "monthly",
     scheduledDate: "2026-10-10",
@@ -2914,13 +2914,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Emergency Stop Button Quarterly Check",
     description:
       "Quarterly inspection and test of emergency stop buttons and interlock systems throughout Edinburgh Technical Office per SFG20 14-18.",
-    priority: "medium",
+    priority: "p3",
     status: "scheduled",
     frequency: "quarterly",
     scheduledDate: "2026-10-11",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
-    assignedTo: "Spark Electrical Testing Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_004",
     notes: "All 6 emergency stop buttons to be tested. Log results on site.",
     attachments: [],
@@ -2933,13 +2933,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Patient Sling LOLER Inspection",
     description:
       "Six-monthly thorough examination of all patient transfer slings (standard and toileting) per LOLER regulations.",
-    priority: "high",
+    priority: "p2",
     status: "scheduled",
     frequency: "biannual",
     scheduledDate: "2026-10-12",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
-    assignedTo: "Highlands Lifting & LOLER Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_003",
     notes:
       "12 slings in total across all rooms. All must have LOLER examination certificate.",
@@ -2953,13 +2953,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Dry Riser Annual Inspection & Test",
     description:
       "Annual inspection and pressure test of dry riser installation per SFG20 23-25. Coordinated with Scottish Fire and Rescue.",
-    priority: "high",
+    priority: "p2",
     status: "scheduled",
     frequency: "annual",
     scheduledDate: "2026-10-13",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
-    assignedTo: "Caledonian Fire & Safety Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_002",
     notes:
       "Scottish Fire and Rescue to be notified 48hrs in advance. Water supply access required.",
@@ -2973,13 +2973,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Monthly Water Temperature Checks — May",
     description:
       "Monthly sentinel outlet and calorifier temperature monitoring for Legionella control — Glasgow Operations Centre.",
-    priority: "medium",
+    priority: "p3",
     status: "scheduled",
     frequency: "monthly",
     scheduledDate: "2026-10-15",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
-    assignedTo: "AquaSafe Compliance Ltd",
+    assignedTo: "Virtual Water Services",
     assignedCompanyId: "sc_005",
     notes:
       "Access required plant room 08:30. Legionella log book to be updated on site.",
@@ -2993,13 +2993,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Roller Shutter Door Annual Service",
     description:
       "Annual inspection and maintenance of roller shutter door at loading bay per SFG20 72-04.",
-    priority: "low",
+    priority: "p6",
     status: "scheduled",
     frequency: "annual",
     scheduledDate: "2026-10-16",
     createdBy: "Michael Kenny",
     createdByUserId: "usr_001",
-    assignedTo: "National Gate Services Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_007",
     notes: "Engineer to check springs, limit switches, and manual override.",
     attachments: [],
@@ -3012,13 +3012,13 @@ export const DEMO_PLANNED_JOBS: PlannedJob[] = [
     title: "Monthly Emergency Lighting Test — May",
     description:
       "Monthly function test of all self-contained emergency lighting fittings per SFG20 37-01.",
-    priority: "medium",
+    priority: "p3",
     status: "scheduled",
     frequency: "monthly",
     scheduledDate: "2026-10-17",
     createdBy: "Michael Shuel",
     createdByUserId: "usr_002",
-    assignedTo: "Caledonian Fire & Safety Ltd",
+    assignedTo: "Virtual Facility Services",
     assignedCompanyId: "sc_002",
     notes:
       "Record pass/fail for each fitting. Any failed units to be reported immediately.",
@@ -3037,7 +3037,7 @@ export const DEMO_WORKS_COMPLETED: WorksCompleted[] = [
     jobTitle: "Annual Fire Extinguisher Service — All Floors",
     workCarriedOut:
       "All fire extinguishers across Ground, First, Second Floors and Plant Room serviced and inspected in line with SFG20 23-13. 12 units checked. 2 discharged units replaced with new water stored pressure units. All service tags updated. Certificates retained on site and copies emailed to site manager.",
-    completedBy: "Stuart Wallace — Caledonian Fire & Safety Ltd",
+    completedBy: "Stuart Wallace — Virtual Facility Services",
     completedDate: "2026-04-29",
     linkedJobType: "permit",
     linkedPermitId: "pmt_001",
@@ -3062,7 +3062,7 @@ export const DEMO_WORKS_COMPLETED: WorksCompleted[] = [
     jobTitle: "Annual Emergency Lighting Function Test — Edinburgh Technical Office",
     workCarriedOut:
       "Annual and monthly function test of all self-contained emergency lighting fittings across the Edinburgh Technical Office. All stairwells, corridors and main areas covered. 3 fittings on Main 2 corridor failed and were replaced with Exiway Quantum fittings. Remaining 47 fittings passed. Test record sheet completed and handed to Michael Shuel on site.",
-    completedBy: "Stuart Wallace — Caledonian Fire & Safety Ltd",
+    completedBy: "Stuart Wallace — Virtual Facility Services",
     completedDate: "2026-04-27",
     linkedJobType: "permit",
     linkedPermitId: "pmt_005",
@@ -3087,7 +3087,7 @@ export const DEMO_WORKS_COMPLETED: WorksCompleted[] = [
     jobTitle: "Annual PAT Testing — Edinburgh Technical Office",
     workCarriedOut:
       "Annual portable appliance testing completed across all office areas, staff room, kitchen and main area common rooms. 67 items tested in total. 64 passed — PASS labels applied. 3 items failed and were immediately removed from service (2x kettles in staff kitchen, 1x fan heater in office 3). Full test register attached. All failed items bagged and labelled for disposal.",
-    completedBy: "Dave McAllister — Spark Electrical Testing Ltd",
+    completedBy: "Dave McAllister — Virtual Facility Services",
     completedDate: "2026-04-29",
     linkedJobType: "permit",
     linkedPermitId: "pmt_008",
@@ -3107,7 +3107,7 @@ export const DEMO_WORKS_COMPLETED: WorksCompleted[] = [
     jobTitle: "Monthly Legionella Temperature Monitoring — Glasgow Operations Centre",
     workCarriedOut:
       "Monthly sentinel outlet and calorifier temperature monitoring completed at Glasgow Operations Centre. All hot water outlets reading between 52°C–58°C at point of use. Cold water outlets all below 20°C. Calorifier flow and return temperatures within specification. No remedial actions required. Log book signed on site and copy left with site manager.",
-    completedBy: "Derek Fraser — Aqua Solutions Scotland",
+    completedBy: "Derek Fraser — Virtual Water Services",
     completedDate: "2026-04-29",
     linkedJobType: "permit",
     linkedPermitId: "pmt_002",
@@ -3126,7 +3126,7 @@ export const DEMO_WORKS_COMPLETED: WorksCompleted[] = [
 export const DEMO_SUPPLY_CHAIN: SupplyChainCompany[] = [
   {
     id: "sc_001",
-    name: "ScotFix Building Services",
+    name: "Virtual Facility Services",
     contactName: "Craig Brennan",
     contactEmail: "craig@scotfix.co.uk",
     contactPhone: "0141 553 4400",
@@ -3140,7 +3140,7 @@ export const DEMO_SUPPLY_CHAIN: SupplyChainCompany[] = [
   },
   {
     id: "sc_002",
-    name: "Caledonian Fire & Safety Ltd",
+    name: "Virtual Facility Services",
     contactName: "Fiona Mackenzie",
     contactEmail: "fiona@caledonianfire.co.uk",
     contactPhone: "0131 228 7700",
@@ -3159,7 +3159,7 @@ export const DEMO_SUPPLY_CHAIN: SupplyChainCompany[] = [
   },
   {
     id: "sc_003",
-    name: "Highlands Lifting & LOLER Ltd",
+    name: "Virtual Facility Services",
     contactName: "Angus Stewart",
     contactEmail: "angus@highlandslifting.co.uk",
     contactPhone: "01463 712 900",
@@ -3178,7 +3178,7 @@ export const DEMO_SUPPLY_CHAIN: SupplyChainCompany[] = [
   },
   {
     id: "sc_004",
-    name: "Spark Electrical Testing Ltd",
+    name: "Virtual Facility Services",
     contactName: "Dave McAllister",
     contactEmail: "dave@sparkelectrical.co.uk",
     contactPhone: "0141 887 3300",
@@ -3197,7 +3197,7 @@ export const DEMO_SUPPLY_CHAIN: SupplyChainCompany[] = [
   },
   {
     id: "sc_005",
-    name: "AquaSafe Compliance Ltd",
+    name: "Virtual Water Services",
     contactName: "Sandra McLean",
     contactEmail: "sandra@aquasafescotland.co.uk",
     contactPhone: "01382 444 200",
@@ -3216,7 +3216,7 @@ export const DEMO_SUPPLY_CHAIN: SupplyChainCompany[] = [
   },
   {
     id: "sc_006",
-    name: "Secure Systems Scotland Ltd",
+    name: "Virtual Facility Services",
     contactName: "Brian Todd",
     contactEmail: "brian@securesystemsscotland.co.uk",
     contactPhone: "0131 555 9900",
@@ -3230,7 +3230,7 @@ export const DEMO_SUPPLY_CHAIN: SupplyChainCompany[] = [
   },
   {
     id: "sc_007",
-    name: "National Gate Services Ltd",
+    name: "Virtual Facility Services",
     contactName: "Peter Campbell",
     contactEmail: "peter@nationalgates.co.uk",
     contactPhone: "0141 226 4400",
@@ -3250,7 +3250,7 @@ export const DEMO_PERMITS: Permit[] = [
   {
     id: "pmt_001",
     siteId: "site_001",
-    contractorCompany: "Caledonian Fire & Safety Ltd",
+    contractorCompany: "Virtual Facility Services",
     contractorName: "Stuart Wallace",
     contractorEmail: "stuart.wallace@caledonianfire.co.uk",
     contractorPhone: "07712 334 891",
@@ -3324,7 +3324,7 @@ export const DEMO_PERMITS: Permit[] = [
   {
     id: "pmt_002",
     siteId: "site_001",
-    contractorCompany: "Aqua Solutions Scotland",
+    contractorCompany: "Virtual Water Services",
     contractorName: "Derek Fraser",
     contractorEmail: "d.fraser@aquasolutionsscotland.co.uk",
     contractorPhone: "07834 221 443",
@@ -3397,7 +3397,7 @@ export const DEMO_PERMITS: Permit[] = [
   {
     id: "pmt_003",
     siteId: "site_002",
-    contractorCompany: "Scotia Electrical Services",
+    contractorCompany: "Virtual Facility Services",
     contractorName: "Alan Reid",
     contractorEmail: "alan.reid@scotiaelectrical.co.uk",
     contractorPhone: "07654 112 009",
@@ -3466,7 +3466,7 @@ export const DEMO_PERMITS: Permit[] = [
   {
     id: "pmt_004",
     siteId: "site_001",
-    contractorCompany: "Highland Lift Services",
+    contractorCompany: "Virtual Facility Services",
     contractorName: "Craig Morrison",
     contractorEmail: "c.morrison@highlandlifts.co.uk",
     contractorPhone: "07901 567 223",
@@ -3535,7 +3535,7 @@ export const DEMO_PERMITS: Permit[] = [
   {
     id: "pmt_005",
     siteId: "site_002",
-    contractorCompany: "Caledonian Fire & Safety Ltd",
+    contractorCompany: "Virtual Facility Services",
     contractorName: "Stuart Wallace",
     contractorEmail: "stuart.wallace@caledonianfire.co.uk",
     contractorPhone: "07712 334 891",
@@ -3608,7 +3608,7 @@ export const DEMO_PERMITS: Permit[] = [
   {
     id: "pmt_006",
     siteId: "site_001",
-    contractorCompany: "QuickFix Plumbing Ltd",
+    contractorCompany: "Virtual Water Services",
     contractorName: "Thomas Dunn",
     contractorEmail: "t.dunn@quickfixplumbing.co.uk",
     contractorPhone: "07811 667 234",
@@ -3681,7 +3681,7 @@ export const DEMO_PERMITS: Permit[] = [
   {
     id: "pmt_008",
     siteId: "site_002",
-    contractorCompany: "Spark Electrical Testing Ltd",
+    contractorCompany: "Virtual Facility Services",
     contractorName: "Dave McAllister",
     contractorEmail: "dave@sparkelectrical.co.uk",
     contractorPhone: "0141 887 3300",
@@ -3755,7 +3755,7 @@ export const DEMO_PERMITS: Permit[] = [
   {
     id: "pmt_009",
     siteId: "site_001",
-    contractorCompany: "AquaSafe Compliance Ltd",
+    contractorCompany: "Virtual Water Services",
     contractorName: "Sandra McLean",
     contractorEmail: "sandra@aquasafescotland.co.uk",
     contractorPhone: "01382 444 200",
@@ -3830,7 +3830,7 @@ export const DEMO_PERMITS: Permit[] = [
   {
     id: "pmt_010",
     siteId: "site_002",
-    contractorCompany: "Highlands Lifting & LOLER Ltd",
+    contractorCompany: "Virtual Facility Services",
     contractorName: "Angus Stewart",
     contractorEmail: "angus@highlandslifting.co.uk",
     contractorPhone: "01463 712 900",
@@ -3899,7 +3899,7 @@ export const DEMO_PERMITS: Permit[] = [
   {
     id: "pmt_007",
     siteId: "site_002",
-    contractorCompany: "National Gate Services Ltd",
+    contractorCompany: "Virtual Facility Services",
     contractorName: "Peter Campbell",
     contractorEmail: "peter@nationalgates.co.uk",
     contractorPhone: "0141 226 4400",
