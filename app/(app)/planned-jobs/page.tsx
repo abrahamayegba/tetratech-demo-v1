@@ -55,7 +55,9 @@ import {
   LayoutList,
   Calendar,
   AlertCircle,
+  Info,
 } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import {
   format,
   startOfMonth,
@@ -103,12 +105,12 @@ const STATUS_CONFIG = {
 } as const;
 
 const PRIORITY_CONFIG = {
-  p1: { label: "P1 — Emergency/Business Critical (Within 2 Hours)", badge: "bg-red-100 text-red-700 border-red-300 font-semibold", dot: "bg-red-500" },
-  p2: { label: "P2 — Same Working Day", badge: "bg-orange-50 text-orange-700 border-orange-200", dot: "bg-orange-500" },
-  p3: { label: "P3 — 1 Day", badge: "bg-amber-50 text-amber-700 border-amber-200", dot: "bg-amber-400" },
-  p4: { label: "P4 — 3 Days", badge: "bg-slate-100 text-slate-600 border-slate-200", dot: "bg-slate-400" },
-  p5: { label: "P5 — 1 Week", badge: "bg-slate-100 text-slate-600 border-slate-200", dot: "bg-slate-400" },
-  p6: { label: "P6 — Next scheduled visit", badge: "bg-slate-100 text-slate-600 border-slate-200", dot: "bg-slate-400" },
+  p1: { label: "P1", description: "Emergency/Business Critical (Within 2 Hours)", badge: "bg-red-100 text-red-700 border-red-300 font-semibold", dot: "bg-red-500" },
+  p2: { label: "P2", description: "Same Working Day", badge: "bg-orange-50 text-orange-700 border-orange-200", dot: "bg-orange-500" },
+  p3: { label: "P3", description: "Within 1 Day", badge: "bg-amber-50 text-amber-700 border-amber-200", dot: "bg-amber-400" },
+  p4: { label: "P4", description: "Within 3 Days", badge: "bg-slate-100 text-slate-600 border-slate-200", dot: "bg-slate-400" },
+  p5: { label: "P5", description: "Within 1 Week", badge: "bg-slate-100 text-slate-600 border-slate-200", dot: "bg-slate-400" },
+  p6: { label: "P6", description: "Next scheduled visit", badge: "bg-slate-100 text-slate-600 border-slate-200", dot: "bg-slate-400" },
 } as const;
 
 const FREQUENCY_LABELS: Record<string, string> = {
@@ -608,10 +610,23 @@ function ListView({
                 </div>
 
                 {/* Priority */}
-                <div className="hidden md:flex">
+                <div className="hidden md:flex items-center gap-1.5">
                   <span className={cn("text-xs border px-2 py-0.5 rounded-md", priorityCfg.badge)}>
                     {priorityCfg.label}
                   </span>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <button
+                        type="button"
+                        aria-label={`What ${priorityCfg.label} means`}
+                        className="text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm"
+                        onClick={(event) => event.stopPropagation()}
+                      >
+                        <Info className="size-3.5" />
+                      </button>
+                    </TooltipTrigger>
+                    <TooltipContent>{priorityCfg.description}</TooltipContent>
+                  </Tooltip>
                 </div>
 
                 {/* Frequency */}
