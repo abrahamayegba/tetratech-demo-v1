@@ -156,33 +156,17 @@ export default function LoginPage() {
               <div className="flex flex-col gap-1.5">
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-muted-foreground">
-                    James Mitchell (FM):
+                    Lucy Simpson (Primary Contact):
                   </span>
                   <button
                     type="button"
                     className="text-[var(--brand-gold)] hover:underline font-mono"
                     onClick={() => {
-                      setEmail("james.mitchell@tetratech.co.uk");
+                      setEmail("lucy.simpson@tetratech.co.uk");
                       setPassword("SecurePass123!");
                     }}
                   >
-                    james.mitchell@... / SecurePass123!
-                  </button>
-                </div>
-
-                <div className="flex items-center justify-between text-xs">
-                  <span className="text-muted-foreground">
-                    Sarah Thompson (FM):
-                  </span>
-                  <button
-                    type="button"
-                    className="text-[var(--brand-gold)] hover:underline font-mono"
-                    onClick={() => {
-                      setEmail("sarah.thompson@tetratech.co.uk");
-                      setPassword("SecurePass456!");
-                    }}
-                  >
-                    sarah.thompson@... / SecurePass456!
+                    lucy.simpson@... / SecurePass123!
                   </button>
                 </div>
               </div>
