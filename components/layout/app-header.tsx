@@ -12,6 +12,7 @@ const BREADCRUMB_MAP: Record<string, string> = {
   "/asset-types": "Asset Library",
   "/assets": "Live Assets",
   "/tests": "Asset Tests",
+  "/scorecard": "Performance Scorecard",
   "/reactive-jobs": "Reactive Jobs",
   "/reports": "Reports",
   "/notifications": "Notifications",

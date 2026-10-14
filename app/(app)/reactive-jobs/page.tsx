@@ -786,7 +786,7 @@ function JobDetailDialog({
 
   return (
     <Dialog open onOpenChange={onClose}>
-      <DialogContent className="max-w-lg">
+      <DialogContent className="max-w-lg max-h-[min(760px,calc(100vh-2rem))] overflow-y-auto">
         <DialogHeader className="gap-1">
           <div className="flex items-center gap-2">
             {job.source === "portal" ? (
@@ -1039,6 +1039,9 @@ function JobDetailDialog({
               Edit Job
             </Button>
           )}
+          <a href={`mailto:facilities@tetratech.com?subject=${encodeURIComponent(`Escalation: ${job.title}`)}&body=${encodeURIComponent(`Please review and escalate this job.\n\nJob: ${job.title}\nSite: ${site?.name ?? "Unknown site"}\nPriority: ${priorityCfg.label}`)}`}>
+            <Button type="button" variant="destructive" size="sm">Escalate to manager</Button>
+          </a>
           <Button
             variant="outline"
             size="sm"

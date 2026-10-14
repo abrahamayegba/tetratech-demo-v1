@@ -56,6 +56,7 @@ import {
   Calendar,
   AlertCircle,
   Info,
+  Mail,
 } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import {
@@ -720,7 +721,7 @@ function JobDetailDialog({
 
   return (
     <Dialog open onOpenChange={onClose}>
-      <DialogContent className="max-w-lg">
+      <DialogContent className="max-w-lg max-h-[min(760px,calc(100vh-2rem))] overflow-y-auto">
         <DialogHeader className="gap-1">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded bg-[var(--brand-purple)]/10 flex items-center justify-center shrink-0">
@@ -801,6 +802,9 @@ function JobDetailDialog({
               Edit Job
             </Button>
           )}
+          <a href={`mailto:facilities@tetratech.com?subject=${encodeURIComponent(`Escalation: ${job.title}`)}&body=${encodeURIComponent(`Please review and escalate this job.\n\nJob: ${job.title}\nSite: ${site?.name ?? "Unknown site"}\nPriority: ${priorityCfg.label}`)}`}>
+            <Button type="button" variant="destructive" size="sm"><Mail className="mr-1.5 size-3.5" />Escalate to manager</Button>
+          </a>
           <Button variant="outline" size="sm" className="ml-auto" onClick={onClose}>
             Close
           </Button>
