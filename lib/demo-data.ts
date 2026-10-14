@@ -2561,7 +2561,12 @@ export const DEMO_REACTIVE_JOBS: ReactiveJob[] = [
     createdAt: "2026-10-08T11:30:00Z",
     updatedAt: "2026-10-08T11:30:00Z",
   },
-];
+].map((job) => ({
+  ...job,
+  createdBy: "Lucy Simpson",
+  contactName: "Lucy Simpson",
+  contactEmail: "lucy.simpson@tetratech.co.uk",
+})) as ReactiveJob[];
 
 // ─── Demo Planned Jobs ─────────────────────────────────────────────────────────
 
@@ -3964,4 +3969,22 @@ export const DEMO_PERMITS: Permit[] = [
     declarationName: "Peter Campbell",
     declarationDate: "2026-04-24",
   },
-];
+].map((permit, index) => ({
+  ...permit,
+  contractorName: "Lucy Simpson",
+  contractorEmail: "lucy.simpson@tetratech.co.uk",
+  supervisorOnSite: "Lucy Simpson",
+  declarationName: "Lucy Simpson",
+  plannedStartDate:
+    index < 4
+      ? "2026-10-14"
+      : index < 8
+        ? "2026-10-15"
+        : permit.plannedStartDate,
+  plannedEndDate:
+    index < 4
+      ? "2026-10-14"
+      : index < 8
+        ? "2026-10-15"
+        : permit.plannedEndDate,
+})) as Permit[];
